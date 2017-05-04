@@ -189,8 +189,8 @@ module.exports = function( grunt ) {
 				files: [{
 					expand: true,
 					src: ['*.js', '!*.min.js'],
-					cwd: 'js/',
-					dest: 'js/',
+					cwd: 'assets/scripts/',
+					dest: 'assets/scripts/',
 					ext: '.min.js',
 					extDot: 'last'
 				}],
@@ -288,8 +288,8 @@ module.exports = function( grunt ) {
 			minify: {
 				expand: true,
 				src: ['*.css', '!*.min.css'],
-				cwd: 'css/',
-				dest: 'css/',
+				cwd: 'assets/styles/',
+				dest: 'assets/styles/',
 				ext: '.min.css',
 				extDot: 'last'
 			}

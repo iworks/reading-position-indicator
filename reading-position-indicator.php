@@ -4,7 +4,7 @@ Plugin Name: Reading Position Indicator
 Plugin URI: http:/iworks.pl/
 Description: Add reading position indicator on page top.
 Author: Marcin Pietrzak
-Version: trunk
+Version: PLUGIN_VERSION
 Author URI: http://iworks.pl/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,7 +49,6 @@ load_plugin_textdomain( 'reading-position-indicator', false, dirname( plugin_bas
  * load options
  */
 function get_iworks_reading_position_indicator_options() {
-
 	$options = new iworks_options();
 	$options->set_option_function_name( 'iworks_reading_position_indicator_options' );
 	$options->set_option_prefix( 'irpi_' );
@@ -58,13 +57,11 @@ function get_iworks_reading_position_indicator_options() {
 }
 
 function iworks_reading_position_indicator_activate() {
-
 	$options = get_iworks_reading_position_indicator_options();
 	$options->activate();
 }
 
 function iworks_reading_position_indicator_deactivate() {
-
 	$options->set_option_prefix( iworks_reading_position_indicator );
 	$options->deactivate();
 }
@@ -72,3 +69,14 @@ function iworks_reading_position_indicator_deactivate() {
  * start
  */
 new iworks_position();
+
+/**
+ * Register to iWorks Rate!
+ */
+include_once dirname( __FILE__ ) .'/vendor/iworks/rate/rate.php';
+do_action(
+	'iworks-register-plugin',
+	plugin_basename( __FILE__ ),
+	__( 'Reading Position Indicator ', 'reading-position-indicator' ),
+	__( 'https://wordpress.org/plugins/reading-position-indicator/', 'reading-position-indicator' )
+);

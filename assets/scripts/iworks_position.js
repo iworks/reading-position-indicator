@@ -13,6 +13,10 @@ if ( typeof(jQuery) != 'undefined' ) {
         $('body').append('<progress value="0" id="reading-position-indicator" class="'+css_class+'"><div class="progress-container"><span class="progress-bar"></span></div></progress>');
 
         var getMax = function(){
+            var end = $('.reading-position-indicator-end');
+            if ( end.length ) {
+                return parseInt( end.offset().top );
+            }
             return $(document).height() - $(window).height();
         }
 

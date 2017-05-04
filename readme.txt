@@ -59,6 +59,11 @@ If you have created your own language pack, or have an update of an existing one
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Release date: 2017-xx-xx
+* Improved progress bar - now it count only document, not whole window.
+
 = 1.0.1 =
 
 * Release date: 2015-04-18

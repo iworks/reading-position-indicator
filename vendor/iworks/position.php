@@ -6,11 +6,10 @@ class iworks_position
 	private $capability;
 	private $options;
 	private $root;
-	private $version = 'trunk';
+	private $version = 'PLUGIN_VERSION';
 	private $min = '.min';
 
 	public function __construct() {
-
 		/**
 		 * static settings
 		 */
@@ -33,10 +32,11 @@ class iworks_position
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'wp_head', array( $this, 'wp_head' ) );
+		add_filter( 'the_content', array( $this, 'the_content' ) );
+		add_action( 'iworks_rate_css', array( $this, 'iworks_rate_css' ) );
 	}
 
 	public function wp_head() {
-
 		if ( ! is_singular() ) {
 			return;
 		}
@@ -82,7 +82,6 @@ switch ( $data['style'] ) {
 	}
 
 	public function admin_init() {
-
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 		/**
 		 * options
@@ -91,7 +90,6 @@ switch ( $data['style'] ) {
 	}
 
 	public function admin_enqueue_scripts() {
-
 		$screen = get_current_screen();
 		if ( 'appearance_page_irpi_index' != $screen->base ) {
 			return;
@@ -102,7 +100,6 @@ switch ( $data['style'] ) {
 	}
 
 	public function wp_enqueue_scripts() {
-
 		if ( ! is_singular() ) {
 			return;
 		}
@@ -130,7 +127,6 @@ switch ( $data['style'] ) {
 	}
 
 	private function get_version( $file = null ) {
-
 		if ( defined( 'IWORKS_DEV_MODE' ) && IWORKS_DEV_MODE ) {
 			if ( null != $file ) {
 				$file = dirname( $this->base ) . $file;
@@ -144,7 +140,6 @@ switch ( $data['style'] ) {
 	}
 
 	public function plugin_row_meta( $links, $file ) {
-
 		if ( ! preg_match( '/reading-position-indicator.php$/', $file ) ) {
 			return $links;
 		}
@@ -160,5 +155,28 @@ switch ( $data['style'] ) {
 			__( 'Donate' )
 		);
 		return $links;
+	}
+
+	/**
+	 * Add marker to content.
+	 *
+	 * @since 1.0.2
+	 */
+	public function the_content( $content ) {
+		if ( is_singular() ) {
+			$content .= '<div class="reading-position-indicator-end"></div>';
+		}
+		return $content;
+	}
+	/**
+	 * Change image for rate message.
+	 *
+	 * @since 1.0.2
+	 */
+	public function iworks_rate_css() {
+		$logo = plugin_dir_url( dirname( dirname( __FILE__ ) ) ).'assets/images/icon.svg';
+		echo '<style type="text/css">';
+		printf( '.iworks-notice-reading-position-indicator .iworks-notice-logo{background-image:url(%s);}', esc_url( $logo ) );
+		echo '</style>';
 	}
 }
