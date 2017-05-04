@@ -8,17 +8,13 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Create a vertical progress bar to show how scroll progress of current
-single entry.
+Create a vertical progress bar to show how scroll progress of current single entry.
 
 == Description ==
 
-Create a vertical progress bar to show how scroll progress of current
-single entry.
+Create a vertical progress bar to show how scroll progress of current single entry.
 
-Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article
-on CSS-TRICKS about [Reading Position
-Indicator](https://css-tricks.com/reading-position-indicator/)
+Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-TRICKS about [Reading Position Indicator](https://css-tricks.com/reading-position-indicator/)
 
 If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to me so that I can bundle it into this plugin. You can [download the latest POT file from here](http://plugins.svn.wordpress.org/reading-position-indicator/trunk/languages/reading-position-indicator.pot).
 
