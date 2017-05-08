@@ -3,6 +3,10 @@ var iworks_progress = (function($, w) {
         $('.wpColorPicker').wpColorPicker();
         iworks_progress.check();
         $('.form-table').on('click', '[name=irpi_style]', iworks_progress.check);
+
+        if ( $.fn.select2 ) {
+            $('.iworks-options .select2').select2();
+        }
     }
 
     function check() {

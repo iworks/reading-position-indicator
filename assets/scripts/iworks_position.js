@@ -15,7 +15,7 @@ if ( typeof(jQuery) != 'undefined' ) {
         var getMax = function(){
             var end = $('.reading-position-indicator-end');
             if ( end.length ) {
-                return parseInt( end.offset().top );
+                return parseInt( end.offset().top )- $(window).height() * 3 / 4;
             }
             return $(document).height() - $(window).height();
         }

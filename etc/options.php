@@ -1,9 +1,7 @@
 <?php
 
-function iworks_reading_position_indicator_options()
-{
+function iworks_reading_position_indicator_options() {
     $options = array();
-
     /**
      * main settings
      */
@@ -21,6 +19,27 @@ function iworks_reading_position_indicator_options()
             'upprev',
         ),
         'options'  => array(
+            array(
+                'name' => 'post_type',
+                'type'              => 'select2',
+                'th'                => __( 'Display On', 'upprev' ),
+                'default'           => array( 'post' ),
+                'options' => iworks_reading_position_indicator_post_types(),
+                'multiple' => true,
+            ),
+            array(
+                'name'              => 'position',
+                'type'              => 'radio',
+                'th'                => __( 'Position', 'upprev' ),
+                'default'           => 'top',
+                'radio'             => array(
+                    'top'           => array( 'label' => __( 'top', 'upprev' ) ),
+                    'bottom'        => array( 'label' => __( 'bottom', 'upprev' ) ),
+                    'left'          => array( 'label' => __( 'left', 'upprev' ) ),
+                    'right'         => array( 'label' => __( 'right', 'upprev' ) ),
+                ),
+                'sanitize_callback' => 'esc_html'
+            ),
             array(
                 'name'              => 'style',
                 'type'              => 'radio',
@@ -63,5 +82,12 @@ function iworks_reading_position_indicator_options()
         ),
     );
     return $options;
+}
+
+function iworks_reading_position_indicator_post_types() {
+    $args = array(
+        'public' => true,
+    );
+    return get_post_types( $args, 'names' );
 }
 

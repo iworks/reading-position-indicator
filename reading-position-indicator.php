@@ -36,7 +36,7 @@ include_once dirname( __FILE__ ).'/etc/options.php';
 $vendor = dirname( __FILE__ ).'/vendor';
 
 if ( ! class_exists( 'iworks_options' ) ) {
-	include_once $vendor.'/iworks/options.php';
+	include_once $vendor.'/iworks/options/options.php';
 }
 include_once $vendor.'/iworks/position.php';
 

@@ -27,6 +27,8 @@ module.exports = function( grunt ) {
 
 		// SASS files to process. Resulting CSS files will be minified as well.
 		css_files_compile: {
+			'assets/styles/iworks_position.css':    'assets/scss/iworks_position.scss',
+			'assets/styles/iworks_position.admin.css':    'assets/scss/iworks_position.admin.scss',
 		},
 
 		// BUILD branches.
@@ -87,6 +89,7 @@ module.exports = function( grunt ) {
 				{ match: /PLUGIN_VERSION/g, replace: '<%= pkg.version %>' },
 				{ match: /BUILDTIME/g, replace: buildtime },
 				{ match: /IWORKS_RATE_TEXTDOMAIN/g, replace: '<%= pkg.name %>' },
+				{ match: /IWORKS_OPTIONS_TEXTDOMAIN/g, replace: '<%= pkg.name %>' },
 				{ match: /\/\* start:pro \*\//g, replace: '' },
 				{ match: /\/\* end:pro \*\//g, replace: '' },
 				{ match: /\/\* start:free \*[^]+?\* end:free \*\//mg, replace: '' },

@@ -93,10 +93,28 @@ switch ( $data['style'] ) {
 		$screen = get_current_screen();
 		if ( 'appearance_page_irpi_index' != $screen->base ) {
 			return;
-		}
+        }
+        /**
+         * select2
+         */
+        $file = 'assets/external/select2/select2.min.js';
+        wp_enqueue_script( 'select2', plugins_url( $file, $this->base ), array( 'jquery' ), '4.0.3' );
+        $file = 'assets/external/select2/select2.min.css';
+        wp_enqueue_style( 'select2', plugins_url( $file, $this->base ), array(), '4.0.3' );
+        /**
+         * plugin file
+         */
 		$file = sprintf( '/assets/scripts/%s.admin%s.js', __CLASS__, $this->min );
 		wp_enqueue_script( __CLASS__, plugins_url( $file, $this->base ), array( 'jquery' ), $this->get_version( $file ) );
 		wp_enqueue_script( __CLASS__ );
+		$file = sprintf( '/assets/styles/%s.admin%s.css', __CLASS__, $this->min );
+		wp_enqueue_style(
+			__CLASS__,
+			plugins_url( $file, $this->base ),
+			array(),
+			$this->get_version(),
+			'handheld, projection, screen'
+		);
 	}
 
 	public function wp_enqueue_scripts() {
