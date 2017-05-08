@@ -55,7 +55,7 @@ function iworks_reading_position_indicator_options() {
             array(
                 'name'              => 'height',
                 'type'              => 'number',
-                'class'             => 'small-text',
+                'class'             => 'small-text slider',
                 'th'                => __( 'Height', 'upprev' ),
                 'label'             => __( 'px', 'upprev' ),
                 'default'           => 5,

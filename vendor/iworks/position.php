@@ -102,6 +102,12 @@ switch ( $data['style'] ) {
         $file = 'assets/external/select2/select2.min.css';
         wp_enqueue_style( 'select2', plugins_url( $file, $this->base ), array(), '4.0.3' );
         /**
+         * jQuery UI Slider
+         */
+        wp_enqueue_script( 'jquery-ui-slider' );
+        $file = 'assets/external/jquery-ui/jquery-ui-slider.min.css';
+        wp_enqueue_style( 'jquery-ui-slider', plugins_url( $file, $this->base ), array(), '1.12.1' );
+        /**
          * plugin file
          */
 		$file = sprintf( '/assets/scripts/%s.admin%s.js', __CLASS__, $this->min );

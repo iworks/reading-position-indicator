@@ -302,7 +302,7 @@ module.exports = function( grunt ) {
 		// WATCH - Watch filesystem for changes during development.
 		watch:  {
 			sass: {
-				files: ['css/src/**/*.scss'],
+				files: ['assets/scss/**/*.scss'],
 				tasks: ['sass', 'autoprefixer'],
 				options: {
 					debounceDelay: 500
@@ -310,7 +310,7 @@ module.exports = function( grunt ) {
 			},
 
 			scripts: {
-				files: ['js/src/**/*.js', 'js/vendor/**/*.js'],
+				files: ['assets/scripts/**/*.js', 'js/vendor/**/*.js'],
 				tasks: ['jshint', 'concat'],
 				options: {
 					debounceDelay: 500

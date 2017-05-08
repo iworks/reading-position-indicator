@@ -1,3 +1,7 @@
 .iworks-options .select2 {
   min-width: 200px;
 }
+.iworks-options div.ui-slider {
+  margin-top: 10px;
+  max-width: 200px;
+}
