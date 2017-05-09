@@ -43,7 +43,25 @@ class iworks_position
 		$data = $this->options->get_all_options();
 		if ( ! isset( $data['style'] ) ) {
 			return;
-		}
+        }
+        $color1 = $data['color1'];
+        if ( isset( $data['color1_opacity'] ) && 100 != $data['color1_opacity'] ) {
+            $color1 = $this->options->hex2rgb( $color1 );
+            $color1[] = $data['color1_opacity'] / 100;
+            $color1 = sprintf( 'rgba(%s)', implode( ',', $color1 ) );
+        }
+        $color2 = $data['color2'];
+        if ( isset( $data['color2_opacity'] ) && 100 != $data['color2_opacity'] ) {
+            $color2 = $this->options->hex2rgb( $color2 );
+            $color2[] = $data['color2_opacity'] / 100;
+            $color2 = sprintf( 'rgba(%s)', implode( ',', $color2 ) );
+        }
+        $background = $data['background'];
+        if ( isset( $data['background_opacity'] ) ) {
+            $background = $this->options->hex2rgb( $background );
+            $background[] = $data['background_opacity'] / 100;
+            $background = sprintf( 'rgba(%s)', implode( ',', $background ) );
+        }
 ?>
 <style type="text/css" media="handheld, projection, screen">
 <?php
@@ -54,25 +72,34 @@ if ( isset( $data['height'] ) ) {
 }
 switch ( $data['style'] ) {
 	case 'solid':
-		if ( isset( $data['color1'] ) ) {
+        if ( isset( $data['color1'] ) ) {
 	?>
-	#reading-position-indicator { color: <?php echo $data['color1']; ?>; }
-#reading-position-indicator::-webkit-progress-value { background-color: <?php echo $data['color1']; ?>; }
-#reading-position-indicator::-moz-progress-bar { background-color: <?php echo $data['color1']; ?>; }
-.progress-bar { background-color: <?php echo $data['color1']; ?>; }
+#reading-position-indicator {
+    color: <?php echo $color1; ?>;
+    background-color: <?php echo $background; ?>;
+}
+#reading-position-indicator::-webkit-progress-value { background-color: <?php echo $color1; ?>; }
+#reading-position-indicator::-moz-progress-bar { background-color: <?php echo $color1; ?>; }
+.progress-bar { background-color: <?php echo $color1; ?>; }
 <?php
 		}
 	break;
 	case 'transparent':
 	?>
-	#reading-position-indicator.single::-webkit-progress-value { background-image: -webkit-linear-gradient(left, transparent, <?php echo $data['color1']; ?>); }
-#reading-position-indicator.single::-moz-progress-bar { background-image: -moz-linear-gradient(left, transparent, <?php echo $data['color1']; ?>); }
+	#reading-position-indicator.single::-webkit-progress-value { background-image: -webkit-linear-gradient(left, transparent, <?php echo $color1; ?>); }
+#reading-position-indicator.single::-moz-progress-bar { background-image: -moz-linear-gradient(left, transparent, <?php echo $color1; ?>); }
 <?php
 	break;
 	case 'gradient':
 	?>
-	#reading-position-indicator.multiple::-webkit-progress-value { background-image: -webkit-linear-gradient( -45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(left, <?php echo $data['color2']; ?>, <?php echo $data['color1']; ?>); }
-#reading-position-indicator.multiple::-moz-progress-bar { background-image: -moz-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -moz-linear-gradient(left, <?php echo $data['color2']; ?>, <?php echo $data['color1']; ?>); }
+#reading-position-indicator.multiple {
+    background: <?php echo $background; ?>;
+    background: -webkit-linear-gradient(left, <?php echo $color1; ?>, <?php echo $color2; ?>);
+    background: -o-linear-gradient(right, <?php echo $color1; ?>, <?php echo $color2; ?>);
+    background: -moz-linear-gradient(right, <?php echo $color1; ?>, <?php echo $color2; ?>);
+    background: linear-gradient(to right, <?php echo $color1; ?>, <?php echo $color2; ?>);
+
+}
 <?php
 	break;
 }
@@ -113,14 +140,6 @@ switch ( $data['style'] ) {
 		$file = sprintf( '/assets/scripts/%s.admin%s.js', __CLASS__, $this->min );
 		wp_enqueue_script( __CLASS__, plugins_url( $file, $this->base ), array( 'jquery' ), $this->get_version( $file ) );
 		wp_enqueue_script( __CLASS__ );
-		$file = sprintf( '/assets/styles/%s.admin%s.css', __CLASS__, $this->min );
-		wp_enqueue_style(
-			__CLASS__,
-			plugins_url( $file, $this->base ),
-			array(),
-			$this->get_version(),
-			'handheld, projection, screen'
-		);
 	}
 
 	public function wp_enqueue_scripts() {
