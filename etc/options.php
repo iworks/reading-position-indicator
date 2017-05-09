@@ -88,6 +88,12 @@ function iworks_reading_position_indicator_post_types() {
     $args = array(
         'public' => true,
     );
-    return get_post_types( $args, 'names' );
+    $p = array();
+    $post_types = get_post_types( $args, 'names' );
+    foreach( $post_types as $post_type ) {
+        $a = get_post_type_object( $post_type );
+        $p[$post_type] = $a->labels->name;
+    }
+    return $p;
 }
 
