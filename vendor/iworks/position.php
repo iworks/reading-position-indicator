@@ -68,6 +68,7 @@ class iworks_position
 if ( isset( $data['height'] ) ) {
 ?>
 #reading-position-indicator{height:<?php echo $data['height']; ?>px}
+#reading-position-indicator{ background: <?php echo $background; ?>}
 <?php
 }
 switch ( $data['style'] ) {
@@ -85,22 +86,23 @@ switch ( $data['style'] ) {
 		}
 	break;
 	case 'transparent':
+    case 'gradient':
+        if ( 'transparent' == $data['style'] ) {
+            $color2 = 'transparent';
+        }
 	?>
-	#reading-position-indicator.single::-webkit-progress-value { background-image: -webkit-linear-gradient(left, transparent, <?php echo $color1; ?>); }
-#reading-position-indicator.single::-moz-progress-bar { background-image: -moz-linear-gradient(left, transparent, <?php echo $color1; ?>); }
-<?php
-	break;
-	case 'gradient':
-	?>
-#reading-position-indicator.multiple {
-    background: <?php echo $background; ?>;
-    background: -webkit-linear-gradient(left, <?php echo $color1; ?>, <?php echo $color2; ?>);
-    background: -o-linear-gradient(right, <?php echo $color1; ?>, <?php echo $color2; ?>);
-    background: -moz-linear-gradient(right, <?php echo $color1; ?>, <?php echo $color2; ?>);
-    background: linear-gradient(to right, <?php echo $color1; ?>, <?php echo $color2; ?>);
-
+#reading-position-indicator::-webkit-progress-value {
+    background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1; ?>);
+}
+#reading-position-indicator::-moz-progress-bar {
+    background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1; ?>);
 }
 <?php
+/*
+    background: -webkit-linear-gradient(left, <?php echo $color2; ?>, <?php echo $color1; ?>); /* For Safari 5.1 to 6.0 * 
+    background: -o-linear-gradient(right, <?php echo $color2; ?>, <?php echo $color1; ?>); /* For Opera 11.1 to 12.0 * 
+    background: -moz-linear-gradient(right, <?php echo $color2; ?>, <?php echo $color1; ?>); /* For Firefox 3.6 to 15 * 
+*/
 	break;
 }
 ?>

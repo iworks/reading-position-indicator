@@ -59,6 +59,7 @@ If you have created your own language pack, or have an update of an existing one
 
 * Release date: 2017-xx-xx
 * Improved progress bar - now it count only document, not whole window.
+* Implemented smooth gradients.
 
 = 1.0.1 =
 
