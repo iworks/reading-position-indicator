@@ -13,6 +13,9 @@
   color: red;
   z-index: 99999;
 }
+#reading-position-indicator:after {
+  background-image: none;
+}
 #reading-position-indicator .progress-container {
   width: 100%;
   background-color: transparent;

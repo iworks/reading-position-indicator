@@ -15,6 +15,10 @@
 	color: red;
 	z-index: 99999;
 
+    &:after {
+        background-image: none;
+    }
+
 	.progress-container {
 		width: 100%;
 		background-color: transparent;
@@ -30,6 +34,7 @@
 			height: inherit;
 		}
 	}
+
 }
 
 .admin-bar {

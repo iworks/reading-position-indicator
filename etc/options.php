@@ -57,8 +57,8 @@ function iworks_reading_position_indicator_options() {
                 'default'           => 'solid',
                 'radio'             => array(
                     'solid'         => array( 'label' => __( 'solid', 'reading-position-indicator' ) ),
-                    'transparent'   => array( 'label' => __( 'transparent to color',  'reading-position-indicator' ) ),
                     'gradient'      => array( 'label' => __( 'gradient',  'reading-position-indicator' ) ),
+                    'indeter'       => array( 'label' => __( 'indeterminate',  'reading-position-indicator' ) ),
                 ),
                 'sanitize_callback' => 'esc_html'
             ),
@@ -131,6 +131,16 @@ function iworks_reading_position_indicator_options() {
                 'min'               => 0,
                 'max'               => 100,
                 'default'           => 5,
+                'sanitize_callback' => 'absint',
+            ),
+            array(
+                'name'              => 'radius',
+                'type'              => 'number',
+                'class'             => 'small-text slider',
+                'th'                => __( 'Progress radius' ),
+                'label'             => __( 'px', 'reading-position-indicator' ),
+                'min'               => 0,
+                'default'           => 0,
                 'sanitize_callback' => 'absint',
             ),
         ),
