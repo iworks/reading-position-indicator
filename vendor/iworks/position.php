@@ -79,11 +79,13 @@ if ( isset( $data['radius'] ) && 0 < $data['radius'] ) {
 }
 ?>
 <?php
+$height = 10;
 if ( isset( $data['height'] ) ) {
-?>
-#reading-position-indicator{height:<?php echo $data['height']; ?>px}
-<?php
+    $height = $data['height'];
 }
+?>
+#reading-position-indicator{height:<?php echo $height; ?>px}
+<?php
 ?>
 #reading-position-indicator{ background: <?php echo $background; ?>}
 #reading-position-indicator::-webkit-progress-bar{background-color: <?php echo $background; ?>}
@@ -118,7 +120,7 @@ switch ( $data['style'] ) {
 		-webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%),
 		-webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)),
 		-webkit-linear-gradient(right, <?php echo $color1; ?>, <?php echo $color2; ?>);
-		background-size: 35px 20px, 100% 100%, 100% 100%;
+background-size: <?php echo $height * 2; ?>px <?php echo $height; ?>px, 100% 100%, 100% 100%;
 	}
 <?php
 
