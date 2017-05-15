@@ -30,7 +30,6 @@ class iworks_position
 		 */
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts' ) );
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'wp_head', array( $this, 'wp_head' ) );
 		add_filter( 'the_content', array( $this, 'the_content' ) );
 		add_action( 'iworks_rate_css', array( $this, 'iworks_rate_css' ) );
@@ -157,32 +156,6 @@ switch ( $data['style'] ) {
 		 * options
 		 */
 		$this->options->options_init();
-	}
-
-	public function admin_enqueue_scripts() {
-		$screen = get_current_screen();
-		if ( 'appearance_page_irpi_index' != $screen->base ) {
-			return;
-        }
-        /**
-         * select2
-         */
-        $file = 'assets/external/select2/select2.min.js';
-        wp_enqueue_script( 'select2', plugins_url( $file, $this->base ), array( 'jquery' ), '4.0.3' );
-        $file = 'assets/external/select2/select2.min.css';
-        wp_enqueue_style( 'select2', plugins_url( $file, $this->base ), array(), '4.0.3' );
-        /**
-         * jQuery UI Slider
-         */
-        wp_enqueue_script( 'jquery-ui-slider' );
-        $file = 'assets/external/jquery-ui/jquery-ui-slider.min.css';
-        wp_enqueue_style( 'jquery-ui-slider', plugins_url( $file, $this->base ), array(), '1.12.1' );
-        /**
-         * plugin file
-         */
-		$file = sprintf( '/assets/scripts/%s.admin%s.js', __CLASS__, $this->min );
-		wp_enqueue_script( __CLASS__, plugins_url( $file, $this->base ), array( 'jquery' ), $this->get_version( $file ) );
-		wp_enqueue_script( __CLASS__ );
 	}
 
 	public function wp_enqueue_scripts() {
