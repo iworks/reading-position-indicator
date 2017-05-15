@@ -1,4 +1,5 @@
 #reading-position-indicator {
+  display: inline-block;
   position: fixed;
   left: 0;
   top: 0;
@@ -12,12 +13,10 @@
   color: red;
   z-index: 99999;
 }
-
-.admin-bar #reading-position-indicator {
-  top: 32px;
+#reading-position-indicator:after {
+  background-image: none;
 }
-
-.progress-container {
+#reading-position-indicator .progress-container {
   width: 100%;
   background-color: transparent;
   position: fixed;
@@ -26,28 +25,13 @@
   height: 5px;
   display: block;
 }
-
-.progress-bar {
+#reading-position-indicator .progress-container .progress-bar {
   background-color: red;
   width: 0%;
   display: block;
   height: inherit;
 }
 
-#reading-position-indicator.single::-webkit-progress-value {
-  background-color: transparent;
-  background-image: -webkit-linear-gradient(left, transparent, red);
-}
-
-#reading-position-indicator.single::-moz-progress-bar {
-  background-color: transparent;
-  background-image: -moz-linear-gradient(left, transparent, red);
-}
-
-#reading-position-indicator.multiple::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, green, red);
-}
-
-#reading-position-indicator.multiple::-moz-progress-bar {
-  background-image: -moz-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(left, green, red);
+.admin-bar #reading-position-indicator {
+  top: 32px;
 }

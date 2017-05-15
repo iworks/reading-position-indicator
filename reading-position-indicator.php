@@ -78,5 +78,5 @@ do_action(
 	'iworks-register-plugin',
 	plugin_basename( __FILE__ ),
 	__( 'Reading Position Indicator ', 'reading-position-indicator' ),
-	__( 'https://wordpress.org/plugins/reading-position-indicator/', 'reading-position-indicator' )
+	'reading-position-indicator'
 );

@@ -59,6 +59,10 @@ If you have created your own language pack, or have an update of an existing one
 
 * Release date: 2017-xx-xx
 * Improved progress bar - now it count only document, not whole window.
+* Implemented smooth gradients.
+* Removed "to transparent" option.
+* Added opacity for all colors.
+* Added rounded corners option..
 
 = 1.0.1 =
 
