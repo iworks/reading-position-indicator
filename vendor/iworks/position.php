@@ -57,7 +57,7 @@ class iworks_position
             $color2 = sprintf( 'rgba(%s)', implode( ',', $color2 ) );
         }
         $background = $data['background'];
-        if ( isset( $data['background_opacity'] ) ) {
+        if ( isset( $data['background_opacity'] ) && 100 != $data['background_opacity']  ) {
             $background = $this->options->hex2rgb( $background );
             $background[] = $data['background_opacity'] / 100;
             $background = sprintf( 'rgba(%s)', implode( ',', $background ) );
@@ -76,7 +76,7 @@ switch ( $data['style'] ) {
 	?>
 #reading-position-indicator {
     color: <?php echo $color1; ?>;
-    background-color: <?php echo $background; ?>;
+    background: <?php echo $background; ?>;
 }
 #reading-position-indicator::-webkit-progress-value { background-color: <?php echo $color1; ?>; }
 #reading-position-indicator::-moz-progress-bar { background-color: <?php echo $color1; ?>; }
