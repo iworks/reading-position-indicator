@@ -35,8 +35,10 @@ function iworks_reading_position_indicator_options() {
                 'radio'             => array(
                     'top'           => array( 'label' => __( 'top', 'reading-position-indicator' ) ),
                     'bottom'        => array( 'label' => __( 'bottom', 'reading-position-indicator' ) ),
+                    /*
                     'left'          => array( 'label' => __( 'left', 'reading-position-indicator' ) ),
-                    'right'         => array( 'label' => __( 'right', 'reading-position-indicator' ) ),
+                        'right'         => array( 'label' => __( 'right', 'reading-position-indicator' ) ),
+                     */
                 ),
                 'sanitize_callback' => 'esc_html'
             ),
@@ -48,7 +50,8 @@ function iworks_reading_position_indicator_options() {
                 'label'             => __( 'px', 'reading-position-indicator' ),
                 'default'           => 0,
                 'min'               => 0,
-                'sanitize_callback' => 'absint'
+                'sanitize_callback' => 'absint',
+                'description'       => __( 'Direction depend on position.', 'reading-position-indicator' ),
             ),
             array(
                 'name'              => 'style',
@@ -63,13 +66,13 @@ function iworks_reading_position_indicator_options() {
                 'sanitize_callback' => 'esc_html'
             ),
             array(
-                'name'              => 'height',
+                'name'              => 'prog23',
                 'type'              => 'number',
-                'class'             => 'small-text slider',
                 'th'                => __( 'Thickness', 'reading-position-indicator' ),
                 'label'             => __( 'px', 'reading-position-indicator' ),
                 'default'           => 5,
-                'sanitize_callback' => 'absint'
+                'sanitize_callback' => 'absint',
+                'classes'           => array( 'small-text', 'slider', ),
             ),
             array(
                 'name'              => 'color1',

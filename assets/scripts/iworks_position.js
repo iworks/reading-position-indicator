@@ -9,7 +9,12 @@ if ( typeof(jQuery) != 'undefined' ) {
             } else if ( 'transparent' == iworks_position.style) {
                 css_class = 'single';
             }
-            css_class += ' ' + iworks_position.style;
+            if ( '' != css_class ) {
+                css_class += ' ';
+            }
+            css_class += iworks_position.style;
+            css_class += ' ';
+            css_class += ' position-' + iworks_position.position;
         }
         $('body').append('<progress value="0" id="reading-position-indicator" class="'+css_class+'"><div class="progress-container"><span class="progress-bar"></span></div></progress>');
 
