@@ -25,47 +25,42 @@ if ( typeof(jQuery) != 'undefined' ) {
             }
             return $(document).height() - $(window).height();
         }
-
+        /**
+         * getValue function to check window scroll
+         */
         var getValue = function(){
             return $(window).scrollTop();
         }
-
-        if ('max' in document.createElement('progress')) {
-            var progressBar = $('#reading-position-indicator');
-
-            progressBar.attr({ max: getMax() });
-
-            $(document).on('scroll', function(){
+            $(window).on( 'load', function(){
                 progressBar.attr({ value: getValue() });
-            });
-
-            $(window).resize(function(){
+            }).on ( 'resize', function() {
                 // On resize, both Max/Value attr needs to be calculated
                 progressBar.attr({ max: getMax(), value: getValue() });
-            }); 
-
+            });
+        if ('max' in document.createElement('progress')) {
+            var progressBar = $('#reading-position-indicator');
+            progressBar.attr({ max: getMax() });
+            $(document).on('scroll', function(){
+                progressBar.attr({ value: getValue() });
+            })
         } else {
-
             var progressBar = $('.progress-bar');
             var max = getMax();
             var value;
             var width;
-
             var getWidth = function() {
                 value = getValue();
                 width = (value/max) * 100;
                 width = width + '%';
                 return width;
             }
-
             var setWidth = function(){
-                progressBar.css({ width: getWidth() });
+                progressBar.attr({ value: getValue() })
             }
-
             $(document).on('scroll', setWidth);
             $(window).on('resize', function(){
                 max = getMax();
-                setWidth();
+                setWidth;
             })
             .on("load", setWidth);
         }

@@ -232,7 +232,7 @@ background-size: <?php echo $height * 2; ?>px <?php echo $height; ?>px, 100% 100
      * @since 1.0.2
      */
     public function the_content( $content ) {
-        if ( ! $this->check ) {
+        if ( $this->check ) {
             $content .= '<div class="reading-position-indicator-end"></div>';
         }
         return $content;

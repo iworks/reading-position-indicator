@@ -35,10 +35,6 @@ function iworks_reading_position_indicator_options() {
                 'radio'             => array(
                     'top'           => array( 'label' => __( 'top', 'reading-position-indicator' ) ),
                     'bottom'        => array( 'label' => __( 'bottom', 'reading-position-indicator' ) ),
-                    /*
-                    'left'          => array( 'label' => __( 'left', 'reading-position-indicator' ) ),
-                        'right'         => array( 'label' => __( 'right', 'reading-position-indicator' ) ),
-                     */
                 ),
                 'sanitize_callback' => 'esc_html'
             ),
@@ -66,11 +62,12 @@ function iworks_reading_position_indicator_options() {
                 'sanitize_callback' => 'esc_html'
             ),
             array(
-                'name'              => 'prog23',
+                'name'              => 'height',
                 'type'              => 'number',
                 'th'                => __( 'Thickness', 'reading-position-indicator' ),
                 'label'             => __( 'px', 'reading-position-indicator' ),
                 'default'           => 5,
+                'min'               => 1,
                 'sanitize_callback' => 'absint',
                 'classes'           => array( 'small-text', 'slider', ),
             ),
