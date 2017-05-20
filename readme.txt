@@ -57,12 +57,14 @@ If you have created your own language pack, or have an update of an existing one
 
 = 1.0.2 =
 
-* Release date: 2017-xx-xx
+* Release date: 2017-05-20
 * Improved progress bar - now it count only document, not whole window.
 * Implemented smooth gradients.
 * Removed "to transparent" option.
 * Added opacity for all colors.
-* Added rounded corners option..
+* Added rounded corners option.
+* Added "indeterminate" option.
+* Updated [WordPress Options Class](https://github.com/iworks/wordpress-options-class) class to 2.6.0.
 
 = 1.0.1 =
 
