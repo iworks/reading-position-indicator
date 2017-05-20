@@ -40,6 +40,8 @@ module.exports = function( grunt ) {
 				'./Gruntfile.js',
 				'./package.json',
 				'./vendor/iworks/rate/README.md',
+				'./vendor/iworks/options/README.md',
+				'./vendor/iworks/options/LICENSE',
 			],
 			exclude_free: [
 				'./changelog.txt',
@@ -48,6 +50,8 @@ module.exports = function( grunt ) {
 				'./Gruntfile.js',
 				'./package.json',
 				'./vendor/iworks/rate/README.md',
+				'./vendor/iworks/options/README.md',
+				'./vendor/iworks/options/LICENSE',
 			],
 			include_files: [
 				'**',
