@@ -83,8 +83,8 @@ module.exports = function( grunt ) {
 				'!.log',
 			],
 			base: 'master',
-			pro: 'sierotki-pro',
-			free: 'sierotki-free',
+			pro: 'reading-position-indicator-pro',
+			free: 'reading-position-indicator-free',
 		},
 
 		// BUILD patterns to exclude code for specific builds.
@@ -138,11 +138,11 @@ module.exports = function( grunt ) {
 				'tests/.*',        // Unit testing.
 			],
 			pot_dir: 'lang/', // With trailing slash.
-			textdomain: 'custom-sidebars',
+			textdomain: 'reading-position-indicator',
 		},
 
-		dev_plugin_file: 'sierotki.php',
-		dev_plugin_dir: 'custom-sidebars/'
+		dev_plugin_file: 'reading-position-indicator.php',
+		dev_plugin_dir: 'reading-position-indicator/'
 	};
 
 	// Project configuration
