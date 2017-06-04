@@ -424,7 +424,7 @@ module.exports = function( grunt ) {
 		if ( target ) {
 			build.push( target );
 		} else {
-			build = ['pro', 'free'];
+			build = ['release'];
 		}
 
 		// First run unit tests.
