@@ -33,20 +33,10 @@ module.exports = function( grunt ) {
 
 		// BUILD branches.
 		plugin_branches: {
-			exclude_pro: [
+			exclude_relase: [
 				'./README.MD',
 				'./README.md',
 				'./readme.txt',
-				'./Gruntfile.js',
-				'./package.json',
-				'./vendor/iworks/rate/README.md',
-				'./vendor/iworks/options/README.md',
-				'./vendor/iworks/options/LICENSE',
-			],
-			exclude_free: [
-				'./changelog.txt',
-				'./README.MD',
-				'./README.md',
 				'./Gruntfile.js',
 				'./package.json',
 				'./vendor/iworks/rate/README.md',
@@ -83,28 +73,16 @@ module.exports = function( grunt ) {
 				'!.log',
 			],
 			base: 'master',
-			pro: 'reading-position-indicator-pro',
-			free: 'reading-position-indicator-free',
+			release: 'reading-position-indicator'
 		},
 
 		// BUILD patterns to exclude code for specific builds.
 		plugin_patterns: {
-			pro: [
+			release: [
 				{ match: /PLUGIN_VERSION/g, replace: '<%= pkg.version %>' },
 				{ match: /BUILDTIME/g, replace: buildtime },
 				{ match: /IWORKS_RATE_TEXTDOMAIN/g, replace: '<%= pkg.name %>' },
 				{ match: /IWORKS_OPTIONS_TEXTDOMAIN/g, replace: '<%= pkg.name %>' },
-				{ match: /\/\* start:pro \*\//g, replace: '' },
-				{ match: /\/\* end:pro \*\//g, replace: '' },
-				{ match: /\/\* start:free \*[^]+?\* end:free \*\//mg, replace: '' },
-			],
-			free: [
-				{ match: /PLUGIN_VERSION/g, replace: '<%= pkg.version %>' },
-				{ match: /BUILDTIME/g, replace: buildtime },
-				{ match: /IWORKS_RATE_TEXTDOMAIN/g, replace: '<%= pkg.name %>' },
-				{ match: /\/\* start:free \*\//g, replace: '' },
-				{ match: /\/\* end:free \*\//g, replace: '' },
-				{ match: /\/\* start:pro \*[^]+?\* end:pro \*\//mg, replace: '' },
 			],
 			// Files to apply above patterns to (not only php files).
 			files: {
@@ -334,60 +312,38 @@ module.exports = function( grunt ) {
 				dot: true,
 				filter: 'isFile'
 			},
-			release_pro: {
+			release_relase: {
 				src: [
-					'release/<%= pkg.version %>-pro/',
-					'release/<%= pkg.name %>-pro-<%= pkg.version %>.zip',
+					'release/<%= pkg.version %>/',
+					'release/<%= pkg.name %>-<%= pkg.version %>.zip',
 				],
 			},
-			release_free: {
-				src: [
-					'release/<%= pkg.version %>-free/',
-					'release/<%= pkg.name %>-free-<%= pkg.version %>.zip',
-				],
-			},
-			pro: conf.plugin_branches.exclude_pro,
-			free: conf.plugin_branches.exclude_free
+			release: conf.plugin_branches.exclude_release
 		},
 
 
 		// BUILD - Copy all plugin files to the release subdirectory.
 		copy: {
-			pro: {
+			release: {
 				src: conf.plugin_branches.include_files,
-				dest: 'release/<%= pkg.version %>-pro/'
-			},
-			free: {
-				src: conf.plugin_branches.include_files,
-				dest: 'release/<%= pkg.version %>-free/'
+				dest: 'release/<%= pkg.version %>/'
 			},
 		},
 
 
 		// BUILD - Create a zip-version of the plugin.
 		compress: {
-			pro: {
+			release: {
 				options: {
 					mode: 'zip',
-					archive: './release/<%= pkg.name %>-pro-<%= pkg.version %>.zip'
+					archive: './release/<%= pkg.name %>-<%= pkg.version %>.zip'
 				},
 				expand: true,
-				cwd: 'release/<%= pkg.version %>-pro/',
+				cwd: 'release/<%= pkg.version %>/',
 				src: [ '**/*' ],
 				dest: conf.dev_plugin_dir
-			},
-			free: {
-				options: {
-					mode: 'zip',
-					archive: './release/<%= pkg.name %>-free-<%= pkg.version %>.zip'
-				},
-				expand: true,
-				cwd: 'release/<%= pkg.version %>-free/',
-				src: [ '**/*' ],
-				dest: conf.dev_plugin_dir
-			},
+			}
 		},
-
 
 		// BUILD - update the translation index .po file.
 		makepot: {
@@ -409,15 +365,9 @@ module.exports = function( grunt ) {
 
 		// BUILD: Replace conditional tags in code.
 		replace: {
-			pro: {
+			release: {
 				options: {
-					patterns: conf.plugin_patterns.pro
-				},
-				files: [conf.plugin_patterns.files]
-			},
-			free: {
-				options: {
-					patterns: conf.plugin_patterns.free
+					patterns: conf.plugin_patterns.release
 				},
 				files: [conf.plugin_patterns.files]
 			}
@@ -425,16 +375,10 @@ module.exports = function( grunt ) {
 
 		// BUILD: Git control (check out branch).
 		gitcheckout: {
-			pro: {
+			release: {
 				options: {
 					verbose: true,
-					branch: conf.plugin_branches.pro,
-					overwrite: true
-				}
-			},
-			free: {
-				options: {
-					branch: conf.plugin_branches.free,
+					branch: conf.plugin_branches.release,
 					overwrite: true
 				}
 			},
@@ -447,26 +391,16 @@ module.exports = function( grunt ) {
 
 		// BUILD: Git control (add files).
 		gitadd: {
-			pro: {
+			release: {
 				options: {
 				verbose: true, all: true }
-			},
-			free: {
-				options: { all: true }
 			},
 		},
 
 		// BUILD: Git control (commit changes).
 		gitcommit: {
-			pro: {
+			release: {
 				verbose: true,
-				options: {
-					message: 'Built from: ' + conf.plugin_branches.base,
-					allowEmpty: true
-				},
-				files: { src: ['.'] }
-			},
-			free: {
 				options: {
 					message: 'Built from: ' + conf.plugin_branches.base,
 					allowEmpty: true
