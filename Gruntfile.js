@@ -312,7 +312,7 @@ module.exports = function( grunt ) {
 				dot: true,
 				filter: 'isFile'
 			},
-			release_relase: {
+			release_release: {
 				src: [
 					'release/<%= pkg.version %>/',
 					'release/<%= pkg.name %>-<%= pkg.version %>.zip',
