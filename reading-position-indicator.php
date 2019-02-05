@@ -4,6 +4,7 @@ Plugin Name: Reading Position Indicator
 Plugin URI: http:/iworks.pl/
 Description: Add reading position indicator on page top.
 Author: Marcin Pietrzak
+Text Domain: reading-position-indicator
 Version: PLUGIN_VERSION
 Author URI: http://iworks.pl/
 License: GPLv2 or later
@@ -42,7 +43,14 @@ include_once $vendor.'/iworks/position.php';
 /**
  * i18n
  */
-load_plugin_textdomain( 'reading-position-indicator', false, dirname( plugin_basename( __FILE__ ) ).'/languages' );
+function irpi_load_plugin_textdomain() {
+	load_plugin_textdomain(
+		'reading-position-indicator',
+		false,
+		dirname( plugin_basename( __FILE__ ) ).'/languages/'
+	);
+}
+add_action( 'plugins_loaded', 'irpi_load_plugin_textdomain' );
 
 /**
  * load options
