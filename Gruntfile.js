@@ -312,7 +312,7 @@ module.exports = function( grunt ) {
 				dot: true,
 				filter: 'isFile'
 			},
-			release_release: {
+			main: {
 				src: [
 					'release/<%= pkg.version %>/',
 					'release/<%= pkg.name %>-<%= pkg.version %>.zip',
@@ -330,6 +330,21 @@ module.exports = function( grunt ) {
 			},
 		},
 
+		potomo: {
+			dist: {
+				options: {
+					poDel: false
+				},
+				files: [{
+					expand: true,
+					cwd: conf.translation.pot_dir,
+					src: ['*.po'],
+					dest: conf.translation.pot_dir,
+					ext: '.mo',
+					nonull: true
+				}]
+			}
+		},
 
 		// BUILD - Create a zip-version of the plugin.
 		compress: {
@@ -373,43 +388,48 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// BUILD: Git control (check out branch).
-		gitcheckout: {
-			release: {
-				options: {
-					verbose: true,
-					branch: conf.plugin_branches.release,
-					overwrite: true
-				}
-			},
-			base: {
-				options: {
-					branch: conf.plugin_branches.base
-				}
-			}
-		},
-
 		// BUILD: Git control (add files).
-		gitadd: {
-			release: {
-				options: {
-				verbose: true, all: true }
+		checktextdomain: {
+			options: {
+				text_domain: 'reading-position-indicator',
+				keywords: [ //List keyword specifications
+					'__:1,2d',
+					'_e:1,2d',
+					'_x:1,2c,3d',
+					'esc_html__:1,2d',
+					'esc_html_e:1,2d',
+					'esc_html_x:1,2c,3d',
+					'esc_attr__:1,2d', 
+					'esc_attr_e:1,2d', 
+					'esc_attr_x:1,2c,3d', 
+					'_ex:1,2c,3d',
+					'_n:1,2,4d', 
+					'_nx:1,2,4c,5d',
+					'_n_noop:1,2,3d',
+					'_nx_noop:1,2,3c,4d'
+				]
 			},
-		},
-
-		// BUILD: Git control (commit changes).
-		gitcommit: {
-			release: {
-				verbose: true,
-				options: {
-					message: 'Built from: ' + conf.plugin_branches.base,
-					allowEmpty: true
-				},
-				files: { src: ['.'] }
+			files: {
+				src: ['inc/**/*.php', 'views/**/*.php' ], //all php 
+				expand: true,
 			},
 		},
 
 	} );
+
+	grunt.registerTask( 'notes', 'Show release notes', function() {
+		grunt.log.subhead( 'Release notes' );
+		grunt.log.writeln( '  1. Check BITBUCKET for pull-requests' );
+		grunt.log.writeln( '  2. Check ASANA for high-priority bugs' );
+		grunt.log.writeln( '  3. Check EMAILS for high-priority bugs' );
+		grunt.log.writeln( '  4. Check FORUM for open threads' );
+		grunt.log.writeln( '  5. REPLY to forum threads + unsubscribe' );
+		grunt.log.writeln( '  6. Update the TRANSLATION files' );
+		grunt.log.writeln( '  7. Generate ARCHIVE' );
+		grunt.log.writeln( '  8. Check ARCHIVE structure - it should be a folder with plugin name' );
+		grunt.log.writeln( '  9. INSTALL on a clean WordPress installation' );
+		grunt.log.writeln( ' 10. RELEASE the plugin!' );
+	});
 
 	// Test task.
 	grunt.registerTask( 'hello', 'Test if grunt is working', function() {
@@ -417,54 +437,14 @@ module.exports = function( grunt ) {
 		grunt.log.writeln( 'Looks like grunt is installed!' );
 	});
 
-	// Plugin build tasks
-	grunt.registerTask( 'build', 'Run all tasks.', function(target) {
-		var build = [], i, branch;
-
-		if ( target ) {
-			build.push( target );
-		} else {
-			build = ['release'];
-		}
-
-		// First run unit tests.
-		/* -- Not used right now...
-		grunt.task.run( 'phpunit' );
-		*/
-
-		// Run the default tasks (js/css/php validation).
-		grunt.task.run( 'default' );
-
-		// Generate all translation files (same for pro and free).
-		grunt.task.run( 'makepot' );
-
-		for ( i in build ) {
-			branch = build[i];
-			grunt.log.subhead( 'Update product branch [' + branch + ']...' );
-
-			// Checkout the destination branch.
-			grunt.task.run( 'gitcheckout:' + branch );
-
-			// Remove code and files that does not belong to this version.
-			grunt.task.run( 'replace:' + branch );
-			grunt.task.run( 'clean:' + branch );
-
-			// Add the processes/cleaned files to the target branch.
-			grunt.task.run( 'gitadd:' + branch );
-			grunt.task.run( 'gitcommit:' + branch );
-
-			// Create a distributable zip-file of the plugin branch.
-			grunt.task.run( 'clean:release_' + branch );
-			grunt.task.run( 'copy:' + branch );
-			grunt.task.run( 'compress:' + branch );
-
-			grunt.task.run( 'gitcheckout:base');
-		}
-	});
-
 	// Default task.
 
 	grunt.registerTask( 'default', ['clean:temp', 'jshint', 'concat', 'uglify', 'sass', 'autoprefixer', 'cssmin'] );
+	grunt.registerTask( 'js', [ 'concat', 'uglify' ] );
+	grunt.registerTask( 'css', [ 'sass', 'cssmin' ] );
+	grunt.registerTask( 'i18n', [ 'checktextdomain', 'makepot', 'potomo' ] );
+	
+	grunt.registerTask( 'build', [ 'default', 'i18n', 'clean', 'copy', 'replace', 'compress', 'notes'] );
 	//grunt.registerTask( 'test', ['phpunit', 'jshint'] );
 
 	grunt.task.run( 'clear' );

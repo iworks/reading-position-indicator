@@ -55,7 +55,7 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 
 = 1.0.3 =
 
-* Release date: 2019-02-05
+* Release date: 2019-02-06
 * Fixed translation problem. Props for [Nabil Moqbel](https://profiles.wordpress.org/nabilmoqbel/) for pointing this issue.
 
 = 1.0.2 =
