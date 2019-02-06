@@ -33,7 +33,7 @@ module.exports = function( grunt ) {
 
 		// BUILD branches.
 		plugin_branches: {
-			exclude_relase: [
+			exclude_release: [
 				'./README.MD',
 				'./README.md',
 				'./readme.txt',
@@ -52,12 +52,17 @@ module.exports = function( grunt ) {
 				'!node_modules/**',
 				'!build/**',
 				'!tests/**',
-				'!**/assetss/src/**',
-				'!**/assets/sass/**',
-				'!**/js/src/**',
+				'!assets/src',
+				'!assets/sass',
+				'!assets/scss',
+				'!assets/src/**',
+				'!assets/sass/**',
+				'!assets/scss/**',
 				'!**/js/vendor/**',
 				'!**/img/src/**',
 				'!**/node_modules/**',
+				'!**/**.po',
+				'!**/**.mo',
 				'!**/**.log',
 				'!**/tests/**',
 				'!**/release/*.zip',
@@ -65,12 +70,19 @@ module.exports = function( grunt ) {
 				'!**/release/**',
 				'!release/**',
 				'!**/Gruntfile.js',
-				'!**/package.json',
+				'!**/package*',
 				'!**/build/**',
 				'!.sass-cache/**',
 				'!.git/**',
 				'!.git',
 				'!.log',
+				'!./README.MD',
+				'!./README.md',
+				'!Gruntfile.js',
+				'!package.json',
+				'!vendor/iworks/rate/README.md',
+				'!vendor/iworks/options/README.md',
+				'!vendor/iworks/options/LICENSE',
 			],
 			base: 'master',
 			release: 'reading-position-indicator'
@@ -318,7 +330,8 @@ module.exports = function( grunt ) {
 					'release/<%= pkg.name %>-<%= pkg.version %>.zip',
 				],
 			},
-			release: conf.plugin_branches.exclude_release
+			release: {}
+            // conf.plugin_branches.exclude_release
 		},
 
 

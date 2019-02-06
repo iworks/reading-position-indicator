@@ -2,10 +2,10 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Reading Position Indicator PLUGIN_VERSION\n"
+"Project-Id-Version: Reading Position Indicator 1.0.3\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/reading-position-indicator\n"
-"POT-Creation-Date: 2019-02-06 17:52:20+00:00\n"
+"POT-Creation-Date: 2019-02-06 18:28:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -121,12 +121,64 @@ msgstr ""
 msgid "Reading Position Indicator "
 msgstr ""
 
+#: vendor/iworks/options/options.php:196
+msgid "An error occurred while getting the configuration."
+msgstr ""
+
+#: vendor/iworks/options/options.php:689
+msgid "Upload image"
+msgstr ""
+
+#: vendor/iworks/options/options.php:695
+msgid "Delete image"
+msgstr ""
+
+#: vendor/iworks/options/options.php:763
+msgid "Save Changes"
+msgstr ""
+
+#: vendor/iworks/options/options.php:1547
+msgid "OFF"
+msgstr ""
+
+#: vendor/iworks/options/options.php:1548
+msgid "ON"
+msgstr ""
+
 #: vendor/iworks/position.php:219
 msgid "Settings"
 msgstr ""
 
 #: vendor/iworks/position.php:224
 msgid "Donate"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:365
+msgid ""
+"Hey %s, you've been using %s for a while now, and we hope you're happy with "
+"it."
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:365
+msgid ""
+"We've spent countless hours developing this free plugin for you, and we "
+"would really appreciate it if you dropped us a quick rating!"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:380
+msgid "Thanks :)"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:383
+msgid "Rate %s"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:387
+msgid "Saving"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:388
+msgid "No thanks"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

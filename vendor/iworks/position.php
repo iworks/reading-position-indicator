@@ -6,7 +6,7 @@ class iworks_position
     private $capability;
     private $options;
     private $root;
-    private $version = 'PLUGIN_VERSION';
+    private $version = '1.0.3';
     private $min = '.min';
     private $check = false;
     private $data = null;

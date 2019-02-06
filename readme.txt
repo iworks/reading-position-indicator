@@ -2,8 +2,8 @@
 Contributors: iworks
 Donate link: http://iworks.pl/donate/reading-position-indicator.php
 Tags: animated, animation, notification, post, posts, indicator
-Requires at least: 3.6
-Tested up to: 4.7.5
+Requires at least: 4.4
+Tested up to: 5.0.3
 Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -57,6 +57,7 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 
 * Release date: 2019-02-06
 * Fixed translation problem. Props for [Nabil Moqbel](https://profiles.wordpress.org/nabilmoqbel/) for pointing this issue.
+* Updated [WordPress Options Class](https://github.com/iworks/wordpress-options-class) class to 2.6.2.
 
 = 1.0.2 =
 

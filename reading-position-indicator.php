@@ -5,7 +5,7 @@ Plugin URI: https://wordpress.org/plugins/reading-position-indicator/
 Description: Add reading position indicator on page top.
 Author: Marcin Pietrzak
 Text Domain: reading-position-indicator
-Version: PLUGIN_VERSION
+Version: 1.0.3
 Author URI: http://iworks.pl/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
