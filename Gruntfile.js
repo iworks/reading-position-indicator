@@ -114,7 +114,7 @@ module.exports = function( grunt ) {
 					'!tests/**',
 					'!.git/**'
 				],
-				dest: './'
+				dest: './release'
 			}
 		},
 
@@ -404,7 +404,9 @@ module.exports = function( grunt ) {
 		// BUILD: Git control (add files).
 		checktextdomain: {
 			options: {
-				text_domain: 'reading-position-indicator',
+                report_missing: true,
+				text_domain: [ 'reading-position-indicator', 'IWORKS_OPTIONS_TEXTDOMAIN', 'IWORKS_RATE_TEXTDOMAIN', ],
+
 				keywords: [ //List keyword specifications
 					'__:1,2d',
 					'_e:1,2d',
@@ -423,7 +425,7 @@ module.exports = function( grunt ) {
 				]
 			},
 			files: {
-				src: ['inc/**/*.php', 'views/**/*.php' ], //all php 
+				src: ['*.php', 'vendor/**/*.php' ], //all php 
 				expand: true,
 			},
 		},
