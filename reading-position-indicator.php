@@ -31,14 +31,14 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-include_once dirname( __FILE__ ).'/etc/options.php';
+include_once dirname( __FILE__ ) . '/etc/options.php';
 
-$vendor = dirname( __FILE__ ).'/vendor';
+$includes = dirname( __FILE__ ) . '/includes';
 
 if ( ! class_exists( 'iworks_options' ) ) {
-	include_once $vendor.'/iworks/options/options.php';
+	include_once $includes . '/iworks/options/options.php';
 }
-include_once $vendor.'/iworks/position.php';
+include_once $includes . '/iworks/class-iworks-position.php';
 
 /**
  * i18n
@@ -47,7 +47,7 @@ function irpi_load_plugin_textdomain() {
 	load_plugin_textdomain(
 		'reading-position-indicator',
 		false,
-		dirname( plugin_basename( __FILE__ ) ).'/languages/'
+		dirname( plugin_basename( __FILE__ ) ) . '/languages/'
 	);
 }
 add_action( 'plugins_loaded', 'irpi_load_plugin_textdomain' );
@@ -80,7 +80,7 @@ new iworks_position();
 /**
  * Register to iWorks Rate!
  */
-include_once dirname( __FILE__ ) .'/vendor/iworks/rate/rate.php';
+include_once dirname( __FILE__ ) . '/includes/iworks/rate/rate.php';
 do_action(
 	'iworks-register-plugin',
 	plugin_basename( __FILE__ ),

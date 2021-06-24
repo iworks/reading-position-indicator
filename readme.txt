@@ -3,8 +3,8 @@ Contributors: iworks
 Donate link: http://iworks.pl/donate/reading-position-indicator.php
 Tags: animated, animation, notification, post, posts, indicator
 Requires at least: 4.4
-Tested up to: 5.0.3
-Stable tag: 1.0.2
+Tested up to: 5.7
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,15 +53,20 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 
 == Changelog ==
 
-= 1.0.3 =
+= 1.0.5 (2021-06-24) =
 
-* Release date: 2019-02-06
+* Updated [WordPress Options Class](https://github.com/iworks/wordpress-options-class) class to 2.7.0.
+* Updated iWorks Rate to 2.0.2.
+
+= 1.0.4 =
+
+= 1.0.3 (2019-02-06) =
+
 * Fixed translation problem. Props for [Nabil Moqbel](https://profiles.wordpress.org/nabilmoqbel/) for pointing this issue.
 * Updated [WordPress Options Class](https://github.com/iworks/wordpress-options-class) class to 2.6.2.
 
-= 1.0.2 =
+= 1.0.2 (2017-05-20) =
 
-* Release date: 2017-05-20
 * Added "indeterminate" option.
 * Added opacity for all colors.
 * Added rounded corners option.
@@ -71,13 +76,12 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 * Updated [WordPress Options Class](https://github.com/iworks/wordpress-options-class) class to 2.6.0.
 * Added "Rate" module to ask for review.
 
-= 1.0.1 =
+= 1.0.1 (2015-04-18) =
 
-* Release date: 2015-04-18
 * Remove "console.log" from script.
 * Fix small issue in main position class.
 
-= 1.0.0 =
+= 1.0.0 (2015-04-14) =
 
-* Release date: 2015-04-14
+* Init.
 
