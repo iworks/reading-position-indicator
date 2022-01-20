@@ -2,7 +2,7 @@
 /**
 Plugin Name: Reading Position Indicator
 Plugin URI: https://wordpress.org/plugins/reading-position-indicator/
-Description: Add reading position indicator on page top.
+Description: PLUGIN_TAGLINE
 Author: Marcin Pietrzak
 Text Domain: reading-position-indicator
 Version: PLUGIN_VERSION
@@ -10,7 +10,7 @@ Author URI: http://iworks.pl/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Copyright Marcin Pietrzak (marcin@iworks.pl)
+Copyright 2017-PLUGIN_TILL_YEAR Marcin Pietrzak (marcin@iworks.pl)
 
 this program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -55,22 +55,33 @@ add_action( 'plugins_loaded', 'irpi_load_plugin_textdomain' );
 /**
  * load options
  */
-function get_iworks_reading_position_indicator_options() {
-	$options = new iworks_options();
-	$options->set_option_function_name( 'iworks_reading_position_indicator_options' );
-	$options->set_option_prefix( 'irpi_' );
-	$options->init();
-	return $options;
+/**
+ * load options
+ */
+
+global $iworks_reading_position_indicator_options;
+$iworks_reading_position_indicator_options = iworks_reading_position_indicator_get_options_object();
+
+function iworks_reading_position_indicator_get_options_object() {
+	global $iworks_reading_position_indicator_options;
+	if ( is_object( $iworks_reading_position_indicator_options ) ) {
+		return $iworks_reading_position_indicator_options;
+	}
+	$iworks_reading_position_indicator_options = new iworks_options();
+	$iworks_reading_position_indicator_options->set_option_function_name( 'iworks_reading_position_indicator_options' );
+	$iworks_reading_position_indicator_options->set_option_prefix( 'irpi_' );
+	$iworks_reading_position_indicator_options->init();
+	return $iworks_reading_position_indicator_options;
 }
 
 function iworks_reading_position_indicator_activate() {
-	$options = get_iworks_reading_position_indicator_options();
-	$options->activate();
+	$iworks_reading_position_indicator_options = get_iworks_reading_position_indicator_options();
+	$iworks_reading_position_indicator_options->activate();
 }
 
 function iworks_reading_position_indicator_deactivate() {
-	$options->set_option_prefix( iworks_reading_position_indicator );
-	$options->deactivate();
+	$iworks_reading_position_indicator_options->set_option_prefix( iworks_reading_position_indicator );
+	$iworks_reading_position_indicator_options->deactivate();
 }
 /**
  * start
@@ -87,3 +98,4 @@ do_action(
 	__( 'Reading Position Indicator ', 'reading-position-indicator' ),
 	'reading-position-indicator'
 );
+

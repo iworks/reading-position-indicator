@@ -24,7 +24,7 @@ class iworks_position {
 		/**
 		 * options
 		 */
-		$this->options = get_iworks_reading_position_indicator_options();
+		$this->options = iworks_reading_position_indicator_get_options_object();
 		/**
 		 * generate
 		 */

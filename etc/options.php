@@ -147,13 +147,13 @@ function iworks_reading_position_indicator_options() {
 		'metaboxes'       => array(
 			'assistance' => array(
 				'title'    => __( 'We are waiting for your message', 'reading-position-indicator' ),
-				'callback' => 'iworks_progress_options_need_assistance',
+				'callback' => 'iworks_reading_position_indicator_options_need_assistance',
 				'context'  => 'side',
 				'priority' => 'core',
 			),
 			'love'       => array(
 				'title'    => __( 'I love what I do!', 'reading-position-indicator' ),
-				'callback' => 'iworks_orphan_options_loved_this_plugin',
+				'callback' => 'iworks_reading_position_indicator_options_loved_this_plugin',
 				'context'  => 'side',
 				'priority' => 'core',
 			),
@@ -175,7 +175,7 @@ function iworks_reading_position_indicator_post_types() {
 	return $p;
 }
 
-function iworks_progress_options_need_assistance( $iworks_progress ) {
+function iworks_reading_position_indicator_options_need_assistance( $iworks_reading_position_indicator ) {
 	$content = apply_filters( 'iworks_rate_assistance', '', 'reading-position-indicator' );
 	if ( ! empty( $content ) ) {
 		echo $content;
@@ -190,7 +190,7 @@ function iworks_progress_options_need_assistance( $iworks_progress ) {
 	<?php
 }
 
-function iworks_orphan_options_loved_this_plugin( $iworks_orphan ) {
+function iworks_reading_position_indicator_options_loved_this_plugin( $iworks_reading_position_indicator ) {
 	$content = apply_filters( 'iworks_rate_love', '', 'reading-position-indicator' );
 	if ( ! empty( $content ) ) {
 		echo $content;
