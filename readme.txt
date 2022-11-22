@@ -3,7 +3,7 @@ Contributors: iworks
 Donate link: http://iworks.pl/donate/reading-position-indicator.php
 Tags: animated, animation, notification, post, posts, indicator
 Requires at least: 4.4
-Tested up to: 5.9
+Tested up to: 6.1
 Stable tag: PLUGIN_VERSION
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
