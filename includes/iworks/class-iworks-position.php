@@ -200,7 +200,7 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 					return md5_file( $file );
 				}
 			}
-			return rand( 0, 99999 );
+			return time();
 		}
 		return $this->version;
 	}

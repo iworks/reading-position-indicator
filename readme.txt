@@ -53,6 +53,10 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 
 == Changelog ==
 
+= 1.0.7 (2023-12-29) =
+* The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 2.9.0.
+* The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.1.6.
+
 = 1.0.6 (2022-01-20) =
 * Updated iWorks Options to 2.8.0.
 * Updated iWorks Rate to 2.0.6.
