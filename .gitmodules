@@ -1,4 +1,4 @@
 [submodule "includes/iworks/options"]
-	url = git@github.com:iworks/wordpress-options-class.git
+    url = git@github.com:iworks/wordpress-options-class.git
 [submodule "includes/iworks/rate"]
-	url = git@github.com:iworks/iworks-rate.git
+    url = git@github.com:iworks/iworks-rate.git
