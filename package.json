@@ -3,7 +3,7 @@
     "title": "Reading Position Indicator",
     "description": "Create a vertical progress bar to show how scroll progress of current single entry.",
     "tagline": "Add reading position indicator on page top.",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "homepage": "https://wordpress.org/plugins/reading-position-indicator/",
     "repository": {
         "type": "git",
