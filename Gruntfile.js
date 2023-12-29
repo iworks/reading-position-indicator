@@ -23,15 +23,14 @@ module.exports = function(grunt) {
     var conf = {
 
         // Concatenate those JS files into a single file (target: [source, source, ...]).
-        js_files_concat: { },
+        js_files_concat: {},
 
         // SASS files to process. Resulting CSS files will be minified as well.
         css_files_compile: {
             'assets/styles/iworks_position.css': 'assets/scss/iworks_position.scss',
             'assets/styles/iworks_position.admin.css': 'assets/scss/iworks_position.admin.scss',
         },
-        css_files_concat: {
-        },
+        css_files_concat: {},
 
         // Regex patterns to exclude from transation.
         translation: {
@@ -58,14 +57,25 @@ module.exports = function(grunt) {
 
         // BUILD patterns to exclude code for specific builds.
         replaces: {
-            patterns: [
-                { match: /BUILDTIME/g, replace: buildtime },
-                { match: /IWORKS_OPTIONS_TEXTDOMAIN/g, replace: '<%= pkg.name %>' },
-                { match: /IWORKS_RATE_TEXTDOMAIN/g, replace: '<%= pkg.name %>' },
-                { match: /PLUGIN_TAGLINE/g, replace: '<%= pkg.tagline %>' },
-                { match: /PLUGIN_TILL_YEAR/g, replace: buildyear },
-                { match: /PLUGIN_VERSION/g, replace: '<%= pkg.version %>' },
-            ],
+            patterns: [{
+                match: /BUILDTIME/g,
+                replace: buildtime
+            }, {
+                match: /IWORKS_OPTIONS_TEXTDOMAIN/g,
+                replace: '<%= pkg.name %>'
+            }, {
+                match: /IWORKS_RATE_TEXTDOMAIN/g,
+                replace: '<%= pkg.name %>'
+            }, {
+                match: /PLUGIN_TAGLINE/g,
+                replace: '<%= pkg.tagline %>'
+            }, {
+                match: /PLUGIN_TILL_YEAR/g,
+                replace: buildyear
+            }, {
+                match: /PLUGIN_VERSION/g,
+                replace: '<%= pkg.version %>'
+            }, ],
 
             // Files to apply above patterns to (not only php files).
             files: {
@@ -324,10 +334,10 @@ module.exports = function(grunt) {
             target: {
                 options: {
                     mode: 'zip',
-                    archive: './release/<%= pkg.name %>-<%= pkg.version %>.zip'
+                    archive: './release/<%= pkg.name %>.zip'
                 },
                 expand: true,
-                cwd: './release/<%= pkg.name %>/',
+                cwd: './release/<%= pkg.version %>/',
                 src: ['**/*']
             }
         },
