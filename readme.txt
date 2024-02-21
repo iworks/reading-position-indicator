@@ -2,11 +2,11 @@
 Contributors: iworks
 Donate link: http://iworks.pl/donate/reading-position-indicator.php
 Tags: animated, animation, notification, post, posts, indicator
-Requires at least: 4.4
-Tested up to: 6.1
+Requires at least: PLUGIN_REQUIRES_WORDPRESS
+Tested up to: PLUGIN_TESTED_WORDPRESS
 Stable tag: PLUGIN_VERSION
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP: PLUGIN_REQUIRES_PHP
+License: GPLv3 or later
 
 PLUGIN_TAGLINE
 
@@ -52,6 +52,11 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 1. A new menu **Progress** in **Appearance** will appear in your Admin Menu.
 
 == Changelog ==
+
+= 1.0.8 (2024-02-21) =
+* The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 2.9.2.
+* The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.1.8.
+* The build process has been updated.
 
 = 1.0.7 (2023-12-29) =
 * The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 2.9.0.
