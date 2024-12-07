@@ -53,6 +53,10 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 
 == Changelog ==
 
+= 1.0.9 (2024-12-07) =
+* The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.2.1.
+* The missing $domain parameter in function call to __() has been fixed. [#1](https://github.com/iworks/reading-position-indicator/issues/1)
+
 = 1.0.8 (2024-02-21) =
 * The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 2.9.2.
 * The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.1.8.

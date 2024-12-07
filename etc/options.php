@@ -137,7 +137,7 @@ function iworks_reading_position_indicator_options() {
 				'name'              => 'radius',
 				'type'              => 'number',
 				'class'             => 'small-text slider',
-				'th'                => __( 'Progress radius' ),
+				'th'                => __( 'Progress radius', 'reading-position-indicator' ),
 				'label'             => __( 'px', 'reading-position-indicator' ),
 				'min'               => 0,
 				'default'           => 0,
