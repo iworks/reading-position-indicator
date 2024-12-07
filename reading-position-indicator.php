@@ -35,21 +35,6 @@ if ( ! class_exists( 'iworks_options' ) ) {
 include_once $includes . '/iworks/class-iworks-position.php';
 
 /**
- * i18n
- */
-function irpi_load_plugin_textdomain() {
-	load_plugin_textdomain(
-		'reading-position-indicator',
-		false,
-		dirname( plugin_basename( __FILE__ ) ) . '/languages/'
-	);
-}
-add_action( 'plugins_loaded', 'irpi_load_plugin_textdomain' );
-
-/**
- * load options
- */
-/**
  * load options
  */
 
@@ -81,15 +66,4 @@ function iworks_reading_position_indicator_deactivate() {
  * start
  */
 new iworks_position();
-
-/**
- * Register to iWorks Rate!
- */
-include_once dirname( __FILE__ ) . '/includes/iworks/rate/rate.php';
-do_action(
-	'iworks-register-plugin',
-	plugin_basename( __FILE__ ),
-	__( 'Reading Position Indicator ', 'reading-position-indicator' ),
-	'reading-position-indicator'
-);
 

@@ -1,7 +1,7 @@
 === Reading Position Indicator ===
 Contributors: iworks
 Donate link: http://iworks.pl/donate/reading-position-indicator.php
-Tags: animated, animation, notification, post, posts, indicator
+Tags: animation, reading time, time, indicator
 Requires at least: PLUGIN_REQUIRES_WORDPRESS
 Tested up to: PLUGIN_TESTED_WORDPRESS
 Stable tag: PLUGIN_VERSION
@@ -56,6 +56,7 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 = 1.0.9 (2024-12-07) =
 * The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.2.1.
 * The missing $domain parameter in function call to __() has been fixed. [#1](https://github.com/iworks/reading-position-indicator/issues/1)
+* Escape functions where been added in few places.
 
 = 1.0.8 (2024-02-21) =
 * The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 2.9.2.

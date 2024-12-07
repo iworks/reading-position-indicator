@@ -8,8 +8,8 @@ function iworks_reading_position_indicator_options() {
 	$options['index'] = array(
 		'use_tabs'        => false,
 		'version'         => '0.0',
-		'page_title'      => __( 'Progress configuration', 'reading-position-indicator' ),
-		'menu_title'      => __( 'Progress', 'reading-position-indicator' ),
+		'page_title'      => esc_html__( 'Progress configuration', 'reading-position-indicator' ),
+		'menu_title'      => esc_html__( 'Progress', 'reading-position-indicator' ),
 		'menu'            => 'theme',
 		'enqueue_scripts' => array(
 			'progress-admin-js',
@@ -22,7 +22,7 @@ function iworks_reading_position_indicator_options() {
 			array(
 				'name'     => 'post_type',
 				'type'     => 'select2',
-				'th'       => __( 'Display On', 'reading-position-indicator' ),
+				'th'       => esc_html__( 'Display On', 'reading-position-indicator' ),
 				'default'  => array( 'post' ),
 				'options'  => iworks_reading_position_indicator_post_types(),
 				'multiple' => true,
@@ -30,11 +30,11 @@ function iworks_reading_position_indicator_options() {
 			array(
 				'name'              => 'position',
 				'type'              => 'radio',
-				'th'                => __( 'Position', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Position', 'reading-position-indicator' ),
 				'default'           => 'top',
 				'radio'             => array(
-					'top'    => array( 'label' => __( 'top', 'reading-position-indicator' ) ),
-					'bottom' => array( 'label' => __( 'bottom', 'reading-position-indicator' ) ),
+					'top'    => array( 'label' => esc_html__( 'top', 'reading-position-indicator' ) ),
+					'bottom' => array( 'label' => esc_html__( 'bottom', 'reading-position-indicator' ) ),
 				),
 				'sanitize_callback' => 'esc_html',
 			),
@@ -42,30 +42,30 @@ function iworks_reading_position_indicator_options() {
 				'name'              => 'position_placement',
 				'type'              => 'number',
 				'class'             => 'small-text slider',
-				'th'                => __( 'Position placement', 'reading-position-indicator' ),
-				'label'             => __( 'px', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Position placement', 'reading-position-indicator' ),
+				'label'             => esc_html__( 'px', 'reading-position-indicator' ),
 				'default'           => 0,
 				'min'               => 0,
 				'sanitize_callback' => 'absint',
-				'description'       => __( 'Direction depend on position.', 'reading-position-indicator' ),
+				'description'       => esc_html__( 'Direction depend on position.', 'reading-position-indicator' ),
 			),
 			array(
 				'name'              => 'style',
 				'type'              => 'radio',
-				'th'                => __( 'Color style', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Color style', 'reading-position-indicator' ),
 				'default'           => 'solid',
 				'radio'             => array(
-					'solid'    => array( 'label' => __( 'solid', 'reading-position-indicator' ) ),
-					'gradient' => array( 'label' => __( 'gradient', 'reading-position-indicator' ) ),
-					'indeter'  => array( 'label' => __( 'indeterminate', 'reading-position-indicator' ) ),
+					'solid'    => array( 'label' => esc_html__( 'solid', 'reading-position-indicator' ) ),
+					'gradient' => array( 'label' => esc_html__( 'gradient', 'reading-position-indicator' ) ),
+					'indeter'  => array( 'label' => esc_html__( 'indeterminate', 'reading-position-indicator' ) ),
 				),
 				'sanitize_callback' => 'esc_html',
 			),
 			array(
 				'name'              => 'height',
 				'type'              => 'number',
-				'th'                => __( 'Thickness', 'reading-position-indicator' ),
-				'label'             => __( 'px', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Thickness', 'reading-position-indicator' ),
+				'label'             => esc_html__( 'px', 'reading-position-indicator' ),
 				'default'           => 5,
 				'min'               => 1,
 				'sanitize_callback' => 'absint',
@@ -75,18 +75,18 @@ function iworks_reading_position_indicator_options() {
 				'name'              => 'color1',
 				'type'              => 'wpColorPicker',
 				'class'             => 'short-text',
-				'th'                => __( 'Foreground color', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Foreground color', 'reading-position-indicator' ),
 				'sanitize_callback' => 'esc_html',
 				'default'           => '#f20',
 				'use_name_as_id'    => true,
-				'description'       => __( 'The part that moves on scroll.', 'reading-position-indicator' ),
+				'description'       => esc_html__( 'The part that moves on scroll.', 'reading-position-indicator' ),
 			),
 			array(
 				'name'              => 'color1_opacity',
 				'type'              => 'number',
 				'class'             => 'small-text slider',
-				'th'                => __( 'Foreground opacity', 'reading-position-indicator' ),
-				'label'             => __( '%', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Foreground opacity', 'reading-position-indicator' ),
+				'label'             => esc_html__( '%', 'reading-position-indicator' ),
 				'min'               => 0,
 				'max'               => 100,
 				'default'           => 100,
@@ -96,7 +96,7 @@ function iworks_reading_position_indicator_options() {
 				'name'              => 'color2',
 				'type'              => 'wpColorPicker',
 				'class'             => 'short-text',
-				'th'                => __( 'Secoundary color', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Secoundary color', 'reading-position-indicator' ),
 				'default'           => '#d93',
 				'sanitize_callback' => 'esc_html',
 				'use_name_as_id'    => true,
@@ -105,8 +105,8 @@ function iworks_reading_position_indicator_options() {
 				'name'              => 'color2_opacity',
 				'type'              => 'number',
 				'class'             => 'small-text slider',
-				'th'                => __( 'Secoundary color opacity', 'reading-position-indicator' ),
-				'label'             => __( '%', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Secoundary color opacity', 'reading-position-indicator' ),
+				'label'             => esc_html__( '%', 'reading-position-indicator' ),
 				'min'               => 0,
 				'max'               => 100,
 				'default'           => 100,
@@ -116,18 +116,18 @@ function iworks_reading_position_indicator_options() {
 				'name'              => 'background',
 				'type'              => 'wpColorPicker',
 				'class'             => 'short-text',
-				'th'                => __( 'Background color', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Background color', 'reading-position-indicator' ),
 				'sanitize_callback' => 'esc_html',
 				'default'           => '#ddd',
 				'use_name_as_id'    => true,
-				'description'       => __( 'The part that moves on scroll.', 'reading-position-indicator' ),
+				'description'       => esc_html__( 'The part that moves on scroll.', 'reading-position-indicator' ),
 			),
 			array(
 				'name'              => 'background_opacity',
 				'type'              => 'number',
 				'class'             => 'small-text slider',
-				'th'                => __( 'Background opacity', 'reading-position-indicator' ),
-				'label'             => __( '%', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Background opacity', 'reading-position-indicator' ),
+				'label'             => esc_html__( '%', 'reading-position-indicator' ),
 				'min'               => 0,
 				'max'               => 100,
 				'default'           => 5,
@@ -137,8 +137,8 @@ function iworks_reading_position_indicator_options() {
 				'name'              => 'radius',
 				'type'              => 'number',
 				'class'             => 'small-text slider',
-				'th'                => __( 'Progress radius', 'reading-position-indicator' ),
-				'label'             => __( 'px', 'reading-position-indicator' ),
+				'th'                => esc_html__( 'Progress radius', 'reading-position-indicator' ),
+				'label'             => esc_html__( 'px', 'reading-position-indicator' ),
 				'min'               => 0,
 				'default'           => 0,
 				'sanitize_callback' => 'absint',
@@ -146,13 +146,13 @@ function iworks_reading_position_indicator_options() {
 		),
 		'metaboxes'       => array(
 			'assistance' => array(
-				'title'    => __( 'We are waiting for your message', 'reading-position-indicator' ),
+				'title'    => esc_html__( 'We are waiting for your message', 'reading-position-indicator' ),
 				'callback' => 'iworks_reading_position_indicator_options_need_assistance',
 				'context'  => 'side',
 				'priority' => 'core',
 			),
 			'love'       => array(
-				'title'    => __( 'I love what I do!', 'reading-position-indicator' ),
+				'title'    => esc_html__( 'I love what I do!', 'reading-position-indicator' ),
 				'callback' => 'iworks_reading_position_indicator_options_loved_this_plugin',
 				'context'  => 'side',
 				'priority' => 'core',
@@ -178,14 +178,14 @@ function iworks_reading_position_indicator_post_types() {
 function iworks_reading_position_indicator_options_need_assistance( $iworks_reading_position_indicator ) {
 	$content = apply_filters( 'iworks_rate_assistance', '', 'reading-position-indicator' );
 	if ( ! empty( $content ) ) {
-		echo $content;
+		echo wp_kses_post( $content );
 		return;
 	}
 
 	?>
-<p><?php _e( 'We are waiting for your message', 'reading-position-indicator' ); ?></p>
+<p><?php esc_html_e( 'We are waiting for your message', 'reading-position-indicator' ); ?></p>
 <ul>
-	<li><a href="<?php _ex( 'https://wordpress.org/support/plugin/sierotki/', 'link to support forum on WordPress.org', 'reading-position-indicator' ); ?>"><?php _e( 'WordPress Help Forum', 'reading-position-indicator' ); ?></a></li>
+	<li><a href="<?php echo esc_html_x( 'https://wordpress.org/support/plugin/sierotki/', 'link to support forum on WordPress.org', 'reading-position-indicator' ); ?>"><?php esc_html_e( 'WordPress Help Forum', 'reading-position-indicator' ); ?></a></li>
 </ul>
 	<?php
 }
@@ -193,14 +193,14 @@ function iworks_reading_position_indicator_options_need_assistance( $iworks_read
 function iworks_reading_position_indicator_options_loved_this_plugin( $iworks_reading_position_indicator ) {
 	$content = apply_filters( 'iworks_rate_love', '', 'reading-position-indicator' );
 	if ( ! empty( $content ) ) {
-		echo $content;
+		echo wp_kses_post( $content );
 		return;
 	}
 	?>
-<p><?php _e( 'Below are some links to help spread this plugin to other users', 'reading-position-indicator' ); ?></p>
+<p><?php esc_html_e( 'Below are some links to help spread this plugin to other users', 'reading-position-indicator' ); ?></p>
 <ul>
-	<li><a href="https://wordpress.org/support/plugin/sierotki/reviews/#new-post"><?php _e( 'Give it a five stars on WordPress.org', 'reading-position-indicator' ); ?></a></li>
-	<li><a href="<?php _ex( 'https://wordpress.org/plugins/sierotki/', 'plugin home page on WordPress.org', 'reading-position-indicator' ); ?>"><?php _e( 'Link to it so others can easily find it', 'reading-position-indicator' ); ?></a></li>
+	<li><a href="https://wordpress.org/support/plugin/sierotki/reviews/#new-post"><?php esc_html_e( 'Give it a five stars on WordPress.org', 'reading-position-indicator' ); ?></a></li>
+	<li><a href="<?php echo esc_html_x( 'https://wordpress.org/plugins/sierotki/', 'plugin home page on WordPress.org', 'reading-position-indicator' ); ?>"><?php esc_html_e( 'Link to it so others can easily find it', 'reading-position-indicator' ); ?></a></li>
 </ul>
 	<?php
 }
