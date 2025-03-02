@@ -185,7 +185,7 @@ function iworks_reading_position_indicator_options_need_assistance( $iworks_read
 	?>
 <p><?php esc_html_e( 'We are waiting for your message', 'reading-position-indicator' ); ?></p>
 <ul>
-	<li><a href="<?php echo esc_html_x( 'https://wordpress.org/support/plugin/sierotki/', 'link to support forum on WordPress.org', 'reading-position-indicator' ); ?>"><?php esc_html_e( 'WordPress Help Forum', 'reading-position-indicator' ); ?></a></li>
+	<li><a href="<?php echo esc_html_x( 'https://wordpress.org/support/plugin/reading-position-indicator/', 'link to support forum on WordPress.org', 'reading-position-indicator' ); ?>"><?php esc_html_e( 'WordPress Help Forum', 'reading-position-indicator' ); ?></a></li>
 </ul>
 	<?php
 }
@@ -199,8 +199,8 @@ function iworks_reading_position_indicator_options_loved_this_plugin( $iworks_re
 	?>
 <p><?php esc_html_e( 'Below are some links to help spread this plugin to other users', 'reading-position-indicator' ); ?></p>
 <ul>
-	<li><a href="https://wordpress.org/support/plugin/sierotki/reviews/#new-post"><?php esc_html_e( 'Give it a five stars on WordPress.org', 'reading-position-indicator' ); ?></a></li>
-	<li><a href="<?php echo esc_html_x( 'https://wordpress.org/plugins/sierotki/', 'plugin home page on WordPress.org', 'reading-position-indicator' ); ?>"><?php esc_html_e( 'Link to it so others can easily find it', 'reading-position-indicator' ); ?></a></li>
+	<li><a href="https://wordpress.org/support/plugin/reading-position-indicator/reviews/#new-post"><?php esc_html_e( 'Give it a five stars on WordPress.org', 'reading-position-indicator' ); ?></a></li>
+	<li><a href="<?php echo esc_html_x( 'https://wordpress.org/plugins/reading-position-indicator/', 'plugin home page on WordPress.org', 'reading-position-indicator' ); ?>"><?php esc_html_e( 'Link to it so others can easily find it', 'reading-position-indicator' ); ?></a></li>
 </ul>
 	<?php
 }

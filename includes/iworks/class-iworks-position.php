@@ -57,10 +57,6 @@ class iworks_position {
 			$this->min = '';
 		}
 		/**
-		 * options
-		 */
-		$this->options = iworks_reading_position_indicator_get_options_object();
-		/**
 		 * generate
 		 */
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
@@ -81,6 +77,7 @@ class iworks_position {
 		if ( ! $this->check ) {
 			return;
 		}
+		$this->check_option_object();
 		$data = $this->get_data();
 		if ( ! isset( $data['style'] ) ) {
 			return;
@@ -195,17 +192,14 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 	}
 
 	public function admin_init() {
-		/**
-		 * options
-		 */
-		$this->options->options_init();
+		$this->check_option_object();
 	}
 
 	public function wp_enqueue_scripts() {
 		if ( ! $this->check ) {
 			return;
 		}
-
+		$this->check_option_object();
 		$file = sprintf( '/assets/styles/%s%s.css', __CLASS__, $this->min );
 		wp_register_style(
 			__CLASS__,
@@ -215,7 +209,6 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 			'handheld, projection, screen'
 		);
 		wp_enqueue_style( __CLASS__ );
-
 		$file = sprintf( '/assets/scripts/%s%s.js', __CLASS__, $this->min );
 		wp_register_script(
 			__CLASS__,
@@ -297,6 +290,7 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 	 * @since 1.0.2
 	 */
 	private function get_data() {
+		$this->check_option_object();
 		if ( null === $this->data ) {
 			$this->data = $this->options->get_all_options();
 		}
@@ -353,5 +347,17 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 			false,
 			plugin_basename( $this->root ) . '/languages'
 		);
+	}
+
+	/**
+	 * check option object
+	 *
+	 * @since 1.0.9
+	 */
+	private function check_option_object() {
+		if ( is_a( $this->options, 'iworks_options' ) ) {
+			return;
+		}
+		$this->options = iworks_reading_position_indicator_get_options_object();
 	}
 }

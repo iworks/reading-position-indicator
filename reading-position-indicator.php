@@ -39,7 +39,7 @@ include_once $includes . '/iworks/class-iworks-position.php';
  */
 
 global $iworks_reading_position_indicator_options;
-$iworks_reading_position_indicator_options = iworks_reading_position_indicator_get_options_object();
+$iworks_reading_position_indicator_options = null;
 
 function iworks_reading_position_indicator_get_options_object() {
 	global $iworks_reading_position_indicator_options;
@@ -49,17 +49,20 @@ function iworks_reading_position_indicator_get_options_object() {
 	$iworks_reading_position_indicator_options = new iworks_options();
 	$iworks_reading_position_indicator_options->set_option_function_name( 'iworks_reading_position_indicator_options' );
 	$iworks_reading_position_indicator_options->set_option_prefix( 'irpi_' );
+	if ( method_exists( $iworks_reading_position_indicator_options, 'set_plugin' ) ) {
+		$iworks_reading_position_indicator_options->set_plugin( basename( __FILE__ ) );
+	}
 	$iworks_reading_position_indicator_options->init();
 	return $iworks_reading_position_indicator_options;
 }
 
 function iworks_reading_position_indicator_activate() {
-	$iworks_reading_position_indicator_options = get_iworks_reading_position_indicator_options();
+	$iworks_reading_position_indicator_options = iworks_reading_position_indicator_get_options_object();
 	$iworks_reading_position_indicator_options->activate();
 }
 
 function iworks_reading_position_indicator_deactivate() {
-	$iworks_reading_position_indicator_options->set_option_prefix( iworks_reading_position_indicator );
+	$iworks_reading_position_indicator_options = iworks_reading_position_indicator_get_options_object();
 	$iworks_reading_position_indicator_options->deactivate();
 }
 /**

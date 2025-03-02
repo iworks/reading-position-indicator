@@ -1,28 +1,18 @@
-# Copyright (C) 2025 AUTHOR_NAME
-# This file is distributed under the GPL v3 or later.
+# Translation of Plugins - Reading Position Indicator - Development (trunk) in Dutch
+# This file is distributed under the same license as the Plugins - Reading Position Indicator - Development (trunk) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.1.0\n"
+"Project-Id-Version: Plugins - Reading Position Indicator - Development "
+"(trunk)\n"
 "Report-Msgid-Bugs-To: http://iworks.pl\n"
-"POT-Creation-Date: 2025-03-02 14:07:19+00:00\n"
+"POT-Creation-Date: 2025-03-02 14:07:09+00:00\n"
+"PO-Revision-Date: 2024-09-12 14:19:58+0000\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
-"Language-Team: iWorks <support@iworks.pl>\n"
-"Language: en\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Country: United States\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"X-Poedit-Basepath: ../\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-Bookmarks: \n"
-"X-Textdomain-Support: yes\n"
-"X-Generator: grunt-wp-i18n 1.0.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
 
 #: etc/options.php:11
 msgid "Progress configuration"
@@ -54,7 +44,7 @@ msgstr ""
 
 #: etc/options.php:46 etc/options.php:68 etc/options.php:141
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: etc/options.php:50
 msgid "Direction depend on position."
@@ -106,7 +96,7 @@ msgstr ""
 
 #: etc/options.php:119
 msgid "Background color"
-msgstr ""
+msgstr "Achtergrondkleur"
 
 #: etc/options.php:129
 msgid "Background opacity"
@@ -151,7 +141,7 @@ msgstr ""
 #: includes/iworks/options/options.php:842
 #: includes/iworks/options/options.php:1950
 msgid "Select Image"
-msgstr ""
+msgstr "Selecteer afbeelding"
 
 #: includes/iworks/options/options.php:847
 msgid "Delete image"
@@ -163,7 +153,7 @@ msgstr ""
 
 #: includes/iworks/options/options.php:1844
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 #: includes/iworks/options/options.php:1845
 msgid "City"
@@ -179,7 +169,7 @@ msgstr ""
 
 #: includes/iworks/options/options.php:2003
 msgid "OFF"
-msgstr ""
+msgstr "UIT"
 
 #: includes/iworks/options/options.php:2004
 msgid "ON"
@@ -187,55 +177,55 @@ msgstr ""
 
 #: includes/iworks/options/options.php:2069
 msgid "Failed Security Check"
-msgstr ""
+msgstr "Mislukte beveiligingscontrole"
 
 #: includes/iworks/rate/rate.php:133
 msgid "Settings"
-msgstr ""
+msgstr "﻿Instellingen"
 
 #: includes/iworks/rate/rate.php:147
 #: includes/iworks/rate/templates/thanks.php:39
 msgid "Provide us a coffee"
 msgstr ""
 
-#: includes/iworks/rate/rate.php:446
 #. translators: %s: plugin id
+#: includes/iworks/rate/rate.php:446
 msgid "There is no plugin with id: %s."
 msgstr ""
 
 #: includes/iworks/rate/rate.php:563
 msgid "OpenGraph"
-msgstr ""
+msgstr "OpenGraph"
 
 #: includes/iworks/rate/rate.php:579
 msgid "OG — Better Share on Social Media"
-msgstr ""
+msgstr "OG – Beter delen op sociale media"
 
 #: includes/iworks/rate/rate.php:580
 msgid "https://wordpress.org/plugins/og/"
-msgstr ""
+msgstr "https://wordpress.org/plugins/og/"
 
 #: includes/iworks/rate/templates/plugins/og.php:4
 msgid "Would you like to boost your website sharing abilities?"
 msgstr ""
 
-#: includes/iworks/rate/templates/plugins/og.php:9
 #. translators: %s is a plugin name with url
+#: includes/iworks/rate/templates/plugins/og.php:9
 msgid "Don't wait, install plugin %s!"
-msgstr ""
+msgstr "Wacht niet, installeer plugin %s!"
 
-#: includes/iworks/rate/templates/plugins/og.php:20
 #. translators: %s is a plugin wp home name, %s plugin name
+#: includes/iworks/rate/templates/plugins/og.php:20
 msgid "Install"
-msgstr ""
+msgstr "Installeren"
 
-#: includes/iworks/rate/templates/thanks.php:23
 #. translators: %s is a plugin name wrapped by strong html tag
+#: includes/iworks/rate/templates/thanks.php:23
 msgid "Thank you for using our plugin %s!"
 msgstr ""
 
-#: includes/iworks/rate/templates/thanks.php:31
 #. translators: %1$s: open anchor tag, %2$s: close anchor tag
+#: includes/iworks/rate/templates/thanks.php:31
 msgid ""
 "Please let us know what you think about our plugin. It is important that we "
 "can develop this tool. Thank you for all the ratings, reviews and donates. "
@@ -269,37 +259,49 @@ msgid ""
 "If every plugin user did it, I could devote myself fully to working on this "
 "plugin. Thanks everyone!"
 msgstr ""
+"Als elke plugin gebruiker het deed, kon ik me volledig wijden aan het werken "
+"aan deze plugin. Bedankt iedereen!"
 
 #: includes/iworks/rate/templates/widgets/donate.php:4
 msgid "Provide me a coffee"
-msgstr ""
+msgstr "Geef mij een kopje koffie"
 
 #: includes/iworks/rate/templates/widgets/support.php:4
 msgid ""
-"Do you have a technical problem? Please contact us. We will be happy to "
-"help you. Or maybe you have an idea for a new feature? Please let us know "
-"about it by filling the support form. We will try to add it!"
+"Do you have a technical problem? Please contact us. We will be happy to help "
+"you. Or maybe you have an idea for a new feature? Please let us know about "
+"it by filling the support form. We will try to add it!"
 msgstr ""
+"Heb je een technisch probleem? Neem dan contact met ons op. Wij helpen je "
+"graag verder. Of misschien heb je een idee voor een nieuwe functie? Laat het "
+"ons weten door het ondersteuningsformulier in te vullen. We zullen proberen "
+"het toe te voegen!"
 
-#: includes/iworks/rate/templates/widgets/support.php:11
 #. translators: %1$s: open anchor tag, %2$s: close anchor tag, %3$s: open
 #. anchor tag, %4$s: close anchor tag
+#: includes/iworks/rate/templates/widgets/support.php:11
 msgid ""
 "Please %1$scheck our FAQ%2$s before adding a thread with technical problem. "
 "If you do not find help there, %3$scheck support forum%4$s for similar "
 "problems."
 msgstr ""
+"Bekijk %1$sonze FAQ%2$s voordat je een thread met een technisch probleem "
+"toevoegt. Als je daar geen hulp vindt, %3$sbekijk het "
+"ondersteuningsforum%4$s voor soortgelijke problemen."
 
 #: includes/iworks/rate/templates/widgets/support.php:26
 msgid ""
 "Do you like our plugin? Could you rate him? Please let us know what you "
-"think about our plugin. It is important that we can develop this tool. "
-"Thank you for all the ratings, reviews and donates."
+"think about our plugin. It is important that we can develop this tool. Thank "
+"you for all the ratings, reviews and donates."
 msgstr ""
+"Vind je onze plugin leuk? Kun je hem waarderen? Laat ons weten wat je van "
+"onze plugin vindt. Het is belangrijk dat we deze tool kunnen ontwikkelen. "
+"Bedankt voor alle waarderingen, beoordelingen en donaties."
 
 #. Plugin Name of the plugin/theme
 msgid "Reading Position Indicator"
-msgstr ""
+msgstr "Reading Position Indicator"
 
 #. Plugin URI of the plugin/theme
 msgid "PLUGIN_URI"
@@ -318,23 +320,38 @@ msgid "AUTHOR_URI"
 msgstr ""
 
 #: etc/options.php:188
+#, fuzzy
 msgctxt "link to support forum on WordPress.org"
 msgid "https://wordpress.org/support/plugin/reading-position-indicator/"
-msgstr ""
+msgstr "https://github.com/iworks/reading-position-indicator"
 
 #: etc/options.php:203
+#, fuzzy
 msgctxt "plugin home page on WordPress.org"
 msgid "https://wordpress.org/plugins/reading-position-indicator/"
-msgstr ""
+msgstr "https://github.com/iworks/reading-position-indicator"
 
-#: includes/iworks/rate/rate.php:469
 #. translators: %s: plugin slug
+#: includes/iworks/rate/rate.php:469
 msgctxt "plugins home"
 msgid "https://wordpress.org/plugins/%s"
 msgstr ""
 
-#: includes/iworks/rate/rate.php:476
 #. translators: %s: plugin slug
+#: includes/iworks/rate/rate.php:476
 msgctxt "plugins support home"
 msgid "https://wordpress.org/support/plugin/%s"
 msgstr ""
+
+#~ msgid ""
+#~ "Create a vertical progress bar to show how scroll progress of current "
+#~ "single entry."
+#~ msgstr ""
+#~ "Maak een voortgangsbalk om de voortgang van het huidige item weer te "
+#~ "geven."
+
+#~ msgid "http://iworks.pl/"
+#~ msgstr "http://iworks.pl/"
+
+#~ msgid "Marcin Pietrzak"
+#~ msgstr "Marcin Pietrzak"

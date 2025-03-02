@@ -1,7 +1,7 @@
 === Reading Position Indicator ===
 Contributors: iworks
 Donate link: http://iworks.pl/donate/reading-position-indicator.php
-Tags: animation, reading time, time, indicator
+Tags: PLUGIN_TAGS
 Requires at least: PLUGIN_REQUIRES_WORDPRESS
 Tested up to: PLUGIN_TESTED_WORDPRESS
 Stable tag: PLUGIN_VERSION
@@ -52,6 +52,10 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 1. A new menu **Progress** in **Appearance** will appear in your Admin Menu.
 
 == Changelog ==
+
+= 1.1.0 (2025-03-02) =
+* The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.2.3.
+* The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 2.9.7.
 
 = 1.0.9 (2024-12-07) =
 * The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.2.1.
