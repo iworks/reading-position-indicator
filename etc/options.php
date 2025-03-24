@@ -20,12 +20,13 @@ function iworks_reading_position_indicator_options() {
 		),
 		'options'         => array(
 			array(
-				'name'     => 'post_type',
-				'type'     => 'select2',
-				'th'       => esc_html__( 'Display On', 'reading-position-indicator' ),
-				'default'  => array( 'post' ),
-				'options'  => iworks_reading_position_indicator_post_types(),
-				'multiple' => true,
+				'name'              => 'post_type',
+				'type'              => 'select2',
+				'th'                => esc_html__( 'Display On', 'reading-position-indicator' ),
+				'default'           => array( 'post' ),
+				'options'           => iworks_reading_position_indicator_post_types(),
+				'multiple'          => true,
+				'sanitize_callback' => 'array_filter',
 			),
 			array(
 				'name'              => 'position',

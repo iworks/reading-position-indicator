@@ -61,6 +61,7 @@ class iworks_position {
 		 */
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_action( 'init', array( $this, 'action_init_load_plugin_textdomain' ) );
+		add_action( 'init', array( $this, 'action_init_option_object' ), 11 );
 		add_action( 'iworks_rate_css', array( $this, 'iworks_rate_css' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts' ) );
 		add_action( 'wp_head', array( $this, 'set_check_value' ), 0 );
@@ -71,6 +72,16 @@ class iworks_position {
 		 */
 		add_filter( 'iworks_rate_notice_logo_style', array( $this, 'filter_plugin_logo' ), 10, 2 );
 		add_filter( 'iworks_rate_settings_page_url_' . 'reading-position-indicator', array( $this, 'filter_get_setting_page_url' ) );
+	}
+
+	/**
+	 * Initialize iWorks Option object
+	 */
+	public function action_init_option_object() {
+		/**
+		 * options
+		 */
+		$this->check_option_object();
 	}
 
 	public function wp_head() {
@@ -278,6 +289,9 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 		}
 		$data = $this->get_data();
 		if ( ! isset( $data['post_type'] ) ) {
+			return;
+		}
+		if ( empty( $data['post_type'] ) ) {
 			return;
 		}
 		$post_type   = get_post_type();
