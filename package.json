@@ -3,7 +3,7 @@
     "title": "Reading Position Indicator",
     "tagline": "Add reading position indicator on page top.",
     "description": "Create a vertical progress bar to show how scroll progress of current single entry.",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "homepage": "https://github.com/iworks/reading-position-indicator",
     "tags": [
         "animation",
