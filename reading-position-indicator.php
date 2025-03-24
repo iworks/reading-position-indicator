@@ -52,7 +52,7 @@ function iworks_reading_position_indicator_get_options_object() {
 	if ( method_exists( $iworks_reading_position_indicator_options, 'set_plugin' ) ) {
 		$iworks_reading_position_indicator_options->set_plugin( basename( __FILE__ ) );
 	}
-	$iworks_reading_position_indicator_options->init();
+	$iworks_reading_position_indicator_options->options_init();
 	return $iworks_reading_position_indicator_options;
 }
 
