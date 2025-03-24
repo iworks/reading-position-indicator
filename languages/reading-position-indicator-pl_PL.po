@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Plugins - Reading Position Indicator - Stable (latest "
 "release)\n"
 "Report-Msgid-Bugs-To: http://iworks.pl\n"
-"POT-Creation-Date: 2025-03-24 07:39:34+00:00\n"
+"POT-Creation-Date: 2025-03-24 08:34:43+00:00\n"
 "PO-Revision-Date: 2025-02-23 18:32:12+0000\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -27,111 +27,111 @@ msgstr "Postęp"
 msgid "Display On"
 msgstr "Pokaż na"
 
-#: etc/options.php:33
+#: etc/options.php:34
 msgid "Position"
 msgstr "Pozycja"
 
-#: etc/options.php:36
+#: etc/options.php:37
 msgid "top"
 msgstr "na górze"
 
-#: etc/options.php:37
+#: etc/options.php:38
 msgid "bottom"
 msgstr "na dole"
 
-#: etc/options.php:45
+#: etc/options.php:46
 msgid "Position placement"
 msgstr "Pozycja"
 
-#: etc/options.php:46 etc/options.php:68 etc/options.php:141
+#: etc/options.php:47 etc/options.php:69 etc/options.php:142
 msgid "px"
 msgstr "px"
 
-#: etc/options.php:50
+#: etc/options.php:51
 msgid "Direction depend on position."
 msgstr "Kierunek zależny od pozycji."
 
-#: etc/options.php:55
+#: etc/options.php:56
 msgid "Color style"
 msgstr "Styl"
 
-#: etc/options.php:58
+#: etc/options.php:59
 msgid "solid"
 msgstr "pełen"
 
-#: etc/options.php:59
+#: etc/options.php:60
 msgid "gradient"
 msgstr "gradient"
 
-#: etc/options.php:60
+#: etc/options.php:61
 msgid "indeterminate"
 msgstr "nieokreślony"
 
-#: etc/options.php:67
+#: etc/options.php:68
 msgid "Thickness"
 msgstr "Grubość"
 
-#: etc/options.php:78
+#: etc/options.php:79
 msgid "Foreground color"
 msgstr "Kolor pierwszego planu"
 
-#: etc/options.php:82 etc/options.php:123
+#: etc/options.php:83 etc/options.php:124
 msgid "The part that moves on scroll."
 msgstr "Część, która przesuwa się przy przewijaniu."
 
-#: etc/options.php:88
+#: etc/options.php:89
 msgid "Foreground opacity"
 msgstr "Nieprzezroczystość"
 
-#: etc/options.php:89 etc/options.php:109 etc/options.php:130
+#: etc/options.php:90 etc/options.php:110 etc/options.php:131
 msgid "%"
 msgstr "%"
 
-#: etc/options.php:99
+#: etc/options.php:100
 msgid "Secoundary color"
 msgstr "Drugi kolor"
 
-#: etc/options.php:108
+#: etc/options.php:109
 msgid "Secoundary color opacity"
 msgstr "Nieprzezroczystość drugiego koloru"
 
-#: etc/options.php:119
+#: etc/options.php:120
 msgid "Background color"
 msgstr "Kolor tła"
 
-#: etc/options.php:129
+#: etc/options.php:130
 msgid "Background opacity"
 msgstr "Krycie tła"
 
-#: etc/options.php:140
+#: etc/options.php:141
 msgid "Progress radius"
 msgstr "Zaokrąglenia paska postępu"
 
-#: etc/options.php:149 etc/options.php:186
+#: etc/options.php:150 etc/options.php:187
 msgid "We are waiting for your message"
 msgstr "Czekamy na twoją wiadomość"
 
-#: etc/options.php:155
+#: etc/options.php:156
 msgid "I love what I do!"
 msgstr "Kocham to co robię!"
 
-#: etc/options.php:188
+#: etc/options.php:189
 msgid "WordPress Help Forum"
 msgstr "Forum Pomocy WordPressa"
 
-#: etc/options.php:200
+#: etc/options.php:201
 msgid "Below are some links to help spread this plugin to other users"
 msgstr "Poniższe odnośniki mogą pomóc innym w znalezieniu wtyczki"
 
-#: etc/options.php:202
+#: etc/options.php:203
 msgid "Give it a five stars on WordPress.org"
 msgstr "Daj wtyczce pięć gwiazdek na WordPress.org"
 
-#: etc/options.php:203
+#: etc/options.php:204
 msgid "Link to it so others can easily find it"
 msgstr "Odnośnik do wtyczki - żeby łatwo było znaleźć"
 
-#: includes/iworks/class-iworks-position.php:334
+#: includes/iworks/class-iworks-position.php:348
 msgid "Reading Position Indicator "
 msgstr "Wskaźnik pozycji czytania"
 
@@ -327,13 +327,13 @@ msgstr ""
 msgid "AUTHOR_URI"
 msgstr ""
 
-#: etc/options.php:188
+#: etc/options.php:189
 #, fuzzy
 msgctxt "link to support forum on WordPress.org"
 msgid "https://wordpress.org/support/plugin/reading-position-indicator/"
 msgstr "https://wordpress.org/support/plugin/sierotki/"
 
-#: etc/options.php:203
+#: etc/options.php:204
 #, fuzzy
 msgctxt "plugin home page on WordPress.org"
 msgid "https://wordpress.org/plugins/reading-position-indicator/"

@@ -53,6 +53,9 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 
 == Changelog ==
 
+= 1.1.2 (2025-03-24) =
+* The issue with the saving multiple option value has been resolved.
+
 = 1.1.1 (2025-03-24) =
 * The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 2.9.8.
 * The issue with the saving options has been resolved.
