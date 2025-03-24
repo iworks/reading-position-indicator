@@ -26,7 +26,13 @@ function iworks_reading_position_indicator_options() {
 				'default'           => array( 'post' ),
 				'options'           => iworks_reading_position_indicator_post_types(),
 				'multiple'          => true,
-				'sanitize_callback' => 'array_filter',
+				/**
+				 * sanitize_callback for multiple (remove after it will be implemented into
+				 * iWorks_Options class.
+				 *
+				 * https://github.com/iworks/wordpress-options-class/issues/4
+				 */
+				'sanitize_callback' => 'iworks_reading_position_indicator_sanitize_callback_multiple',
 			),
 			array(
 				'name'              => 'position',
@@ -204,4 +210,14 @@ function iworks_reading_position_indicator_options_loved_this_plugin( $iworks_re
 	<li><a href="<?php echo esc_html_x( 'https://wordpress.org/plugins/reading-position-indicator/', 'plugin home page on WordPress.org', 'reading-position-indicator' ); ?>"><?php esc_html_e( 'Link to it so others can easily find it', 'reading-position-indicator' ); ?></a></li>
 </ul>
 	<?php
+}
+
+/**
+ * sanitize_callback for multiple (remove after it will be implemented into
+ * iWorks_Options class.
+ *
+ * https://github.com/iworks/wordpress-options-class/issues/4
+ */
+function iworks_reading_position_indicator_sanitize_callback_multiple( $value ) {
+	return $value;
 }
