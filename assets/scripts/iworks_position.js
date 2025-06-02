@@ -1,68 +1,75 @@
-if ( typeof(jQuery) != 'undefined' ) {
-    jQuery(document).ready(function($){
+document.addEventListener('DOMContentLoaded', function() {
+    var css_class = '';
 
-        var css_class = '';
-
-        if ( 'undefined' != typeof iworks_position ) {
-            if ( 'gradient' == iworks_position.style) {
-                css_class = 'multiple';
-            } else if ( 'transparent' == iworks_position.style) {
-                css_class = 'single';
-            }
-            if ( '' != css_class ) {
-                css_class += ' ';
-            }
-            css_class += iworks_position.style;
+    if (typeof iworks_position !== 'undefined') {
+        if (iworks_position.style === 'gradient') {
+            css_class = 'multiple';
+        } else if (iworks_position.style === 'transparent') {
+            css_class = 'single';
+        }
+        if (css_class) {
             css_class += ' ';
-            css_class += ' position-' + iworks_position.position;
         }
-        $('body').append('<progress value="0" id="reading-position-indicator" class="'+css_class+'"><div class="progress-container"><span class="progress-bar"></span></div></progress>');
+        css_class += iworks_position.style;
+        css_class += ' position-' + iworks_position.position;
+    }
 
-        var getMax = function(){
-            var end = $('.reading-position-indicator-end');
-            if ( end.length ) {
-                return parseInt( end.offset().top )- $(window).height() * 3 / 4;
-            }
-            return $(document).height() - $(window).height();
+    // Create and append progress element
+    var progress = document.createElement('progress');
+    progress.value = 0;
+    progress.id = 'reading-position-indicator';
+    progress.className = css_class || '';
+    progress.innerHTML = '<div class="progress-container"><span class="progress-bar"></span></div>';
+    document.body.appendChild(progress);
+
+    var getMax = function() {
+        var end = document.querySelector('.reading-position-indicator-end');
+        if (end) {
+            var endRect = end.getBoundingClientRect();
+            return endRect.top + window.pageYOffset - (window.innerHeight * 0.75);
         }
-        /**
-         * getValue function to check window scroll
-         */
-        var getValue = function(){
-            return $(window).scrollTop();
-        }
-            $(window).on( 'load', function(){
-                progressBar.attr({ value: getValue() });
-            }).on ( 'resize', function() {
-                // On resize, both Max/Value attr needs to be calculated
-                progressBar.attr({ max: getMax(), value: getValue() });
-            });
-        if ('max' in document.createElement('progress')) {
-            var progressBar = $('#reading-position-indicator');
-            progressBar.attr({ max: getMax() });
-            $(document).on('scroll', function(){
-                progressBar.attr({ value: getValue() });
-            })
+        return document.documentElement.scrollHeight - window.innerHeight;
+    };
+
+    var getValue = function() {
+        return window.pageYOffset || document.documentElement.scrollTop;
+    };
+
+    var updateProgress = function() {
+        var value = getValue();
+        if ('value' in progress) {
+            progress.value = value;
         } else {
-            var progressBar = $('.progress-bar');
-            var max = getMax();
-            var value;
-            var width;
-            var getWidth = function() {
-                value = getValue();
-                width = (value/max) * 100;
-                width = width + '%';
-                return width;
+            var progressBar = document.querySelector('.progress-bar');
+            if (progressBar) {
+                var max = getMax();
+                var width = max > 0 ? (value / max) * 100 : 0;
+                progressBar.style.width = width + '%';
             }
-            var setWidth = function(){
-                progressBar.attr({ value: getValue() })
-            }
-            $(document).on('scroll', setWidth);
-            $(window).on('resize', function(){
-                max = getMax();
-                setWidth;
-            })
-            .on("load", setWidth);
         }
+    };
+
+    var handleResize = function() {
+        var max = getMax();
+        if ('max' in progress) {
+            progress.max = max;
+        }
+        updateProgress();
+    };
+
+    // Check if progress element supports the value property
+    if ('max' in document.createElement('progress')) {
+        progress.max = getMax();
+        document.addEventListener('scroll', updateProgress);
+    } else {
+        updateProgress(); // Initial update for non-progress browsers
+    }
+
+    // Event listeners
+    window.addEventListener('load', function() {
+        updateProgress();
     });
-}
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+});
