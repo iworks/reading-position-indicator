@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Plugins - Reading Position Indicator - Stable (latest "
 "release)\n"
 "Report-Msgid-Bugs-To: http://iworks.pl\n"
-"POT-Creation-Date: 2025-06-02 18:02:28+00:00\n"
+"POT-Creation-Date: 2025-06-02 18:32:31+00:00\n"
 "PO-Revision-Date: 2024-09-12 14:19:58+0000\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -377,16 +377,14 @@ msgid "AUTHOR_URI"
 msgstr ""
 
 #: etc/options.php:189
-#, fuzzy
 msgctxt "link to support forum on WordPress.org"
 msgid "https://wordpress.org/support/plugin/reading-position-indicator/"
-msgstr "https://github.com/iworks/reading-position-indicator"
+msgstr ""
 
 #: etc/options.php:204
-#, fuzzy
 msgctxt "plugin home page on WordPress.org"
 msgid "https://wordpress.org/plugins/reading-position-indicator/"
-msgstr "https://github.com/iworks/reading-position-indicator"
+msgstr ""
 
 #. translators: %s: plugin slug
 #: includes/iworks/rate/rate.php:613
@@ -400,12 +398,8 @@ msgctxt "plugins support home"
 msgid "https://wordpress.org/support/plugin/%s"
 msgstr ""
 
-#~ msgid ""
-#~ "Create a vertical progress bar to show how scroll progress of current "
-#~ "single entry."
-#~ msgstr ""
-#~ "Maak een voortgangsbalk om de voortgang van het huidige item weer te "
-#~ "geven."
+#~ msgid "https://github.com/iworks/reading-position-indicator"
+#~ msgstr "https://github.com/iworks/reading-position-indicator"
 
 #~ msgid "http://iworks.pl/"
 #~ msgstr "http://iworks.pl/"
