@@ -14,13 +14,13 @@ PLUGIN_TAGLINE
 
 Reading Position Indicator adds a stylish vertical progress bar alongside your content, showing readers how far they've scrolled. It enhances user engagement by providing a clear visual cue of reading progress, ideal for blogs, articles, and long-form content.
 
-**Features:**
-* Vertical progress bar displayed on posts and pages
-* Customizable colors, opacity, rounded edges, and gradients
-* Lightweight and performance optimized
-* Easy setup with no coding required
-* Accessibility friendly and translation ready
-* Compatible with most WordPress themes
+**Features**
+* Vertical progress bar displayed on posts and pages.
+* Customizable colors, opacity, rounded edges, and gradients.
+* Lightweight and performance optimized.
+* Easy setup with no coding required.
+* Translation ready.
+* Compatible with most WordPress themes.
 
 
 
@@ -63,13 +63,13 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 
 == Frequently Asked Questions ==
 
-= Can I change the color of the progress bar? =  
+= Can I change the color of the progress bar? =
 Yes, you can customize colors, opacity, and style from the plugin settings under Appearance > Progress.
 
-= Does this plugin affect site performance? =  
+= Does this plugin affect site performance? =
 No, it is lightweight and optimized to have minimal impact on your site’s loading speed.
 
-= Is the progress bar visible on mobile devices? =  
+= Is the progress bar visible on mobile devices? =
 Yes, the progress bar is responsive and works well on all screen sizes.
 
 == Changelog ==
