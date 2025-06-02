@@ -15,7 +15,7 @@ PLUGIN_TAGLINE
 Reading Position Indicator adds a stylish vertical progress bar alongside your content, showing readers how far they've scrolled. It enhances user engagement by providing a clear visual cue of reading progress, ideal for blogs, articles, and long-form content.
 
 **Features**
-* Vertical progress bar displayed on posts and pages.
+* Horizontal progress bar displayed on posts and pages.
 * Customizable colors, opacity, rounded edges, and gradients.
 * Lightweight and performance optimized.
 * Easy setup with no coding required.
