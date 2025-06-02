@@ -418,7 +418,7 @@ msgid "https://wordpress.org/support/plugin/%s"
 msgstr "https://wordpress.org/support/plugin/%s"
 
 #~ msgid ""
-#~ "A sleek, customizable vertical progress bar that visually indicates "
+#~ "A sleek, customizable horizontal progress bar that visually indicates "
 #~ "readers' scroll position on your WordPress posts and pages."
 #~ msgstr ""
 #~ "Elegancki, konfigurowalny pionowy pasek postępu, który wizualnie wskazuje "
