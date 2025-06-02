@@ -3,7 +3,7 @@
 Copyright 2015-PLUGIN_TILL_YEAR Marcin Pietrzak (marcin@iworks.pl)
 
 this program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License, version 2, as
+it under the terms of the GNU General Public License, version 3, as
 published by the Free Software Foundation.
 
 This program is distributed in the hope that it will be useful,
@@ -40,15 +40,15 @@ class iworks_position {
 		/**
 		 * static settings
 		 */
-		$this->base       = dirname( dirname( __FILE__ ) );
-		$this->root       = plugins_url( '', ( dirname( dirname( __FILE__ ) ) ) );
+		$this->base       = dirname( __DIR__, 1 );
+		$this->root       = plugins_url( '', ( dirname( __DIR__, 1 ) ) );
 		$this->capability = apply_filters( 'iworks_reading_position_indicator_capability', 'manage_options' );
 		/**
 		 * plugin ID
 		 *
 		 * @since 3.3.2
 		 */
-		$file              = dirname( dirname( dirname( __FILE__ ) ) ) . '/reading-position-indicator.php';
+		$file              = dirname( __DIR__, 2 ) . '/reading-position-indicator.php';
 		$this->plugin_file = plugin_basename( $file );
 		/**
 		 * is debug?
@@ -97,26 +97,26 @@ class iworks_position {
 		if ( isset( $data['color1_opacity'] ) && 100 != $data['color1_opacity'] ) {
 			$color1   = $this->options->hex2rgb( $color1 );
 			$color1[] = $data['color1_opacity'] / 100;
-			$color1   = sprintf( 'rgba(%s)', implode( ',', $color1 ) );
+			$color1   = sprintf( 'rgba(%s)', esc_attr( implode( ',', $color1 ) ) );
 		}
 		$color2 = $data['color2'];
 		if ( isset( $data['color2_opacity'] ) && 100 != $data['color2_opacity'] ) {
 			$color2   = $this->options->hex2rgb( $color2 );
 			$color2[] = $data['color2_opacity'] / 100;
-			$color2   = sprintf( 'rgba(%s)', implode( ',', $color2 ) );
+			$color2   = sprintf( 'rgba(%s)', esc_attr( implode( ',', $color2 ) ) );
 		}
 		$background = $data['background'];
 		if ( isset( $data['background_opacity'] ) && 100 != $data['background_opacity'] ) {
 			$background   = $this->options->hex2rgb( $background );
 			$background[] = $data['background_opacity'] / 100;
-			$background   = sprintf( 'rgba(%s)', implode( ',', $background ) );
+			$background   = sprintf( 'rgba(%s)', esc_attr( implode( ',', $background ) ) );
 		}
 		echo '<style type="text/css" media="handheld, projection, screen">';
 		if ( isset( $data['radius'] ) && 0 < $data['radius'] ) {
-			$style = sprintf( 'border-radius: %dpx;', $data['radius'] );
-			printf( '#reading-position-indicator::-moz-progress-bar { %s }', $style );
-			printf( '#reading-position-indicator::-webkit-progress-value { %s }', $style );
-			printf( '#reading-position-indicator[role] { %s }', $style );
+			$style = sprintf( 'border-radius: %dpx;', esc_attr( $data['radius'] ) );
+			printf( '#reading-position-indicator::-moz-progress-bar { %s }', esc_attr( $style ) );
+			printf( '#reading-position-indicator::-webkit-progress-value { %s }', esc_attr( $style ) );
+			printf( '#reading-position-indicator[role] { %s }', esc_attr( $style ) );
 		}
 		echo 'body #reading-position-indicator,';
 		echo 'body.admin-bar #reading-position-indicator {';
@@ -138,44 +138,44 @@ class iworks_position {
 		if ( isset( $data['height'] ) ) {
 			$height = $data['height'];
 		}
-		printf( 'height: %spx;', $height );
-		printf( 'background: %s;', $background );
+		printf( 'height: %spx;', esc_attr( $height ) );
+		printf( 'background: %s;', esc_attr( $background ) );
 		echo '}';
 
 		?>
-#reading-position-indicator::-webkit-progress-bar{background-color: <?php echo $background; ?>}
+#reading-position-indicator::-webkit-progress-bar{background-color: <?php echo esc_attr( $background ); ?>}
 		<?php
 		switch ( $data['style'] ) {
 			case 'solid':
 				if ( isset( $data['color1'] ) ) {
 					?>
-	#reading-position-indicator {
-	color: <?php echo $color1; ?>;
-background: <?php echo $background; ?>;
+#reading-position-indicator {
+color: <?php echo esc_attr( $color1 ); ?>;
+background: <?php echo esc_attr( $background ); ?>;
 }
 #reading-position-indicator::-webkit-progress-value {
-background-color: <?php echo $color1; ?>;
+background-color: <?php echo esc_attr( $color1 ); ?>;
 }
 #reading-position-indicator::-moz-progress-bar {
-background-color: <?php echo $color1; ?>;
+background-color: <?php echo esc_attr( $color1 ); ?>;
 }
 #reading-position-indicator::[aria-valuenow]:before {
-background-color: <?php echo $color1; ?>;
+background-color: <?php echo esc_attr( $color1 ); ?>;
 }
 .progress-bar  {
-background-color: <?php echo $color1; ?>; ;
+background-color: <?php echo esc_attr( $color1 ); ?>;
 }
 					<?php
 				}
 				break;
 			case 'indeter':
 				?>
-	#reading-position-indicator[value]::-webkit-progress-value {
-	background-image:
-	-webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%),
-	-webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)),
-	-webkit-linear-gradient(right, <?php echo $color1; ?>, <?php echo $color2; ?>);
-background-size: <?php echo $height * 2; ?>px <?php echo $height; ?>px, 100% 100%, 100% 100%;
+#reading-position-indicator[value]::-webkit-progress-value {
+background-image:
+-webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%),
+-webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)),
+-webkit-linear-gradient(right, <?php echo esc_attr( $color1 ); ?>, <?php echo esc_attr( $color2 ); ?>);
+background-size: <?php echo esc_attr( $height * 2 ); ?>px <?php echo esc_attr( $height ); ?>px, 100% 100%, 100% 100%;
 }
 				<?php
 
@@ -186,13 +186,13 @@ background-size: <?php echo $height * 2; ?>px <?php echo $height; ?>px, 100% 100
 				}
 				?>
 #reading-position-indicator::-webkit-progress-value {
-background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1; ?>);
+background: linear-gradient(to right, <?php echo esc_attr( $color2 ); ?>, <?php echo esc_attr( $color1 ); ?>);
 }
 #reading-position-indicator::-moz-progress-bar {
-background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1; ?>);
+background: linear-gradient(to right, <?php echo esc_attr( $color2 ); ?>, <?php echo esc_attr( $color1 ); ?>);
 }
 #reading-position-indicator[role][aria-valuenow] {
-background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1; ?>) !important;
+background: linear-gradient(to right, <?php echo esc_attr( $color2 ); ?>, <?php echo esc_attr( $color1 ); ?>) !important;
 }
 				<?php
 				break;
@@ -224,7 +224,7 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 		wp_register_script(
 			__CLASS__,
 			plugins_url( $file, $this->base ),
-			array( 'jquery' ),
+			array(),
 			$this->version,
 			true
 		);
@@ -272,7 +272,7 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 	 * @since 1.0.2
 	 */
 	public function iworks_rate_css() {
-		$logo = plugin_dir_url( dirname( dirname( __FILE__ ) ) ) . 'assets/images/icon.svg';
+		$logo = plugin_dir_url( dirname( __DIR__, 1 ) ) . 'assets/images/icon.svg';
 		echo '<style type="text/css">';
 		printf( '.iworks-notice-reading-position-indicator .iworks-notice-logo{background-image:url(%s);}', esc_url( $logo ) );
 		echo '</style>';
@@ -324,7 +324,7 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 			$plugin = (array) $plugin;
 		}
 		if ( 'reading-position-indicator' === $plugin['slug'] ) {
-			return plugin_dir_url( dirname( dirname( __FILE__ ) ) ) . '/assets/images/icon.svg';
+			return plugin_dir_url( dirname( __DIR__, 1 ) ) . '/assets/images/icon.svg';
 		}
 		return $logo;
 	}
@@ -340,7 +340,7 @@ background: linear-gradient(to right, <?php echo $color2; ?>, <?php echo $color1
 	 */
 	public function action_init_register_iworks_rate() {
 		if ( ! class_exists( 'iworks_rate' ) ) {
-			include_once dirname( __FILE__ ) . '/rate/rate.php';
+			include_once __DIR__ . '/rate/rate.php';
 		}
 		do_action(
 			'iworks-register-plugin',

@@ -12,7 +12,17 @@ PLUGIN_TAGLINE
 
 == Description ==
 
-Create a vertical progress bar to show how scroll progress of current single entry.
+Reading Position Indicator adds a stylish vertical progress bar alongside your content, showing readers how far they've scrolled. It enhances user engagement by providing a clear visual cue of reading progress, ideal for blogs, articles, and long-form content.
+
+**Features:**
+* Vertical progress bar displayed on posts and pages
+* Customizable colors, opacity, rounded edges, and gradients
+* Lightweight and performance optimized
+* Easy setup with no coding required
+* Accessibility friendly and translation ready
+* Compatible with most WordPress themes
+
+
 
 Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-TRICKS about [Reading Position Indicator](https://css-tricks.com/reading-position-indicator/)
 
@@ -51,11 +61,28 @@ Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. A new menu **Progress** in **Appearance** will appear in your Admin Menu.
 
+== Frequently Asked Questions ==
+
+= Can I change the color of the progress bar? =  
+Yes, you can customize colors, opacity, and style from the plugin settings under Appearance > Progress.
+
+= Does this plugin affect site performance? =  
+No, it is lightweight and optimized to have minimal impact on your site’s loading speed.
+
+= Is the progress bar visible on mobile devices? =  
+Yes, the progress bar is responsive and works well on all screen sizes.
+
 == Changelog ==
 
-= 1.1.3 (2025-06-02) =
+= 1.2.0 (2025-06-02) =
 * The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to 2.3.0.
 * The [iWorks Options](https://github.com/iworks/wordpress-options-class) module has been updated to 3.0.7.
+* Removed jQuery dependency from frontend, improving performance and reducing page load time.
+* Fixed security issues by properly escaping RGBA color values in the progress bar.
+* Improved code quality and maintainability with modern JavaScript practices.
+* Fixed typo in 'Secondary' color option label.
+* Enhanced cross-browser compatibility for the progress indicator.
+* Added support for mobile devices with proper orientation change handling.
 
 = 1.1.2 (2025-03-24) =
 * The issue with the saving multiple option value has been resolved.

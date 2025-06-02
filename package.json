@@ -2,8 +2,8 @@
     "name": "reading-position-indicator",
     "title": "Reading Position Indicator",
     "tagline": "Add reading position indicator on page top.",
-    "description": "Create a vertical progress bar to show how scroll progress of current single entry.",
-    "version": "1.1.2",
+    "description": "A sleek, customizable vertical progress bar that visually indicates readers' scroll position on your WordPress posts and pages.",
+    "version": "1.2.0",
     "homepage": "https://github.com/iworks/reading-position-indicator",
     "tags": [
         "animation",
@@ -28,7 +28,7 @@
         "PHP": "8.0"
     },
     "tested": {
-        "WordPress": "6.7"
+        "WordPress": "6.8"
     },
     "devDependencies": {
         "grunt": "^1",
