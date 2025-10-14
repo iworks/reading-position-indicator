@@ -1,12 +1,12 @@
-# Translation of Plugins - Reading Position Indicator - Stable (latest release) in Polish
-# This file is distributed under the same license as the Plugins - Reading Position Indicator - Stable (latest release) package.
+# Translation of Plugins - Reading Position Indicator - Development (trunk) in Polish
+# This file is distributed under the same license as the Plugins - Reading Position Indicator - Development (trunk) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Plugins - Reading Position Indicator - Stable (latest "
-"release)\n"
+"Project-Id-Version: Plugins - Reading Position Indicator - Development "
+"(trunk)\n"
 "Report-Msgid-Bugs-To: http://iworks.pl\n"
-"POT-Creation-Date: 2025-06-02 18:32:31+00:00\n"
-"PO-Revision-Date: 2025-06-02 18:25:53+0000\n"
+"POT-Creation-Date: 2025-10-14 10:38:19+00:00\n"
+"PO-Revision-Date: 2025-09-05 08:17:35+0000\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -135,78 +135,78 @@ msgstr "Odnośnik do wtyczki - żeby łatwo było znaleźć"
 msgid "Reading Position Indicator "
 msgstr "Wskaźnik pozycji czytania"
 
-#: includes/iworks/options/options.php:176
+#: includes/iworks/options/options.php:175
 msgid "No Page Title"
 msgstr "Brak tytułu strony"
 
-#: includes/iworks/options/options.php:341
+#: includes/iworks/options/options.php:340
 msgid "An error occurred while getting the configuration."
 msgstr "Wystąpił błąd przy pobieraniu konfiguracji."
 
-#: includes/iworks/options/options.php:920
-#: includes/iworks/options/options.php:2383
+#: includes/iworks/options/options.php:919
+#: includes/iworks/options/options.php:2407
 msgid "Select Image"
 msgstr "Wybierz obrazek"
 
-#: includes/iworks/options/options.php:925
+#: includes/iworks/options/options.php:924
 msgid "Delete image"
 msgstr "Usuń obrazek"
 
-#: includes/iworks/options/options.php:1033
+#: includes/iworks/options/options.php:1032
 msgid "Save Changes"
 msgstr "Zapisz zmiany"
 
-#: includes/iworks/options/options.php:2256
+#: includes/iworks/options/options.php:2280
 msgid "Country"
 msgstr "Kraj"
 
-#: includes/iworks/options/options.php:2257
+#: includes/iworks/options/options.php:2281
 msgid "City"
 msgstr "Miejscowość"
 
-#: includes/iworks/options/options.php:2258
+#: includes/iworks/options/options.php:2282
 msgid "Street"
 msgstr "Ulica"
 
-#: includes/iworks/options/options.php:2259
+#: includes/iworks/options/options.php:2283
 msgid "ZIP code"
 msgstr "Kod pocztowy"
 
-#: includes/iworks/options/options.php:2443
+#: includes/iworks/options/options.php:2467
 msgid "OFF"
 msgstr "Wyłącz"
 
-#: includes/iworks/options/options.php:2444
+#: includes/iworks/options/options.php:2468
 msgid "ON"
 msgstr "WŁĄCZ"
 
-#: includes/iworks/options/options.php:2509
+#: includes/iworks/options/options.php:2533
 msgid "Failed Security Check"
 msgstr "Nieudana kontrola bezpieczeństwa"
 
-#: includes/iworks/rate/rate.php:133
+#: includes/iworks/rate/rate.php:159
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: includes/iworks/rate/rate.php:147
+#: includes/iworks/rate/rate.php:173
 #: includes/iworks/rate/templates/thanks.php:39
 msgid "Provide us a coffee"
 msgstr "Postaw nam kawę"
 
 #. translators: %s: plugin id
-#: includes/iworks/rate/rate.php:590
+#: includes/iworks/rate/rate.php:626
 msgid "There is no plugin with id: %s."
 msgstr "Brak wtyczki o identyfikatorze %s."
 
-#: includes/iworks/rate/rate.php:764
+#: includes/iworks/rate/rate.php:800
 msgid "OpenGraph"
 msgstr "OpenGraph"
 
-#: includes/iworks/rate/rate.php:780
+#: includes/iworks/rate/rate.php:816
 msgid "OG — Better Share on Social Media"
 msgstr "OG — Lepsze udostępnianie w mediach społecznościowych"
 
-#: includes/iworks/rate/rate.php:781
+#: includes/iworks/rate/rate.php:817
 msgid "https://wordpress.org/plugins/og/"
 msgstr "https://pl.wordpress.org/plugins/og/"
 
@@ -233,7 +233,7 @@ msgid ""
 "coffee. Every little bit helps us keep improving and adding new features for "
 "awesome users like you!"
 msgstr ""
-"Jeśli wtyczka okazała się pomocna i chcesz wesprzeć jej dalszy rozwój, "
+"Jeśli nasza wtyczka okazała się pomocna i chcesz wesprzeć jej dalszy rozwój, "
 "byłbym niezmiernie wdzięczny, gdybyś rozważyła lub rozważył postawienie mi "
 "kawy. Każda odrobina pomaga nam w ciągłym doskonaleniu i dodawaniu nowych "
 "funkcji dla wspaniałych użytkowników, takich jak Ty!"
@@ -406,13 +406,13 @@ msgid "https://wordpress.org/plugins/reading-position-indicator/"
 msgstr "https://pl.wordpress.org/plugins/reading-position-indicator/"
 
 #. translators: %s: plugin slug
-#: includes/iworks/rate/rate.php:613
+#: includes/iworks/rate/rate.php:649
 msgctxt "plugins home"
 msgid "https://wordpress.org/plugins/%s"
 msgstr "https://pl.wordpress.org/plugins/%s"
 
 #. translators: %s: plugin slug
-#: includes/iworks/rate/rate.php:620
+#: includes/iworks/rate/rate.php:656
 msgctxt "plugins support home"
 msgid "https://wordpress.org/support/plugin/%s"
 msgstr "https://wordpress.org/support/plugin/%s"
@@ -421,7 +421,7 @@ msgstr "https://wordpress.org/support/plugin/%s"
 #~ "A sleek, customizable horizontal progress bar that visually indicates "
 #~ "readers' scroll position on your WordPress posts and pages."
 #~ msgstr ""
-#~ "Elegancki, konfigurowalny pionowy pasek postępu, który wizualnie wskazuje "
+#~ "Elegancki, konfigurowalny poziomy pasek postępu, który wizualnie wskazuje "
 #~ "pozycję przewijania treści w WordPressie."
 
 #~ msgid "https://github.com/iworks/reading-position-indicator"
