@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Plugins - Reading Position Indicator - Development "
 "(trunk)\n"
 "Report-Msgid-Bugs-To: http://iworks.pl\n"
-"POT-Creation-Date: 2025-10-14 10:38:19+00:00\n"
+"POT-Creation-Date: 2026-06-17 10:53:59+00:00\n"
 "PO-Revision-Date: 2025-09-05 08:17:35+0000\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -135,52 +135,58 @@ msgstr "Odnośnik do wtyczki - żeby łatwo było znaleźć"
 msgid "Reading Position Indicator "
 msgstr "Wskaźnik pozycji czytania"
 
-#: includes/iworks/options/options.php:175
+#: includes/iworks/options/includes/class-iworks-options-logger.php:99
+msgid ""
+"Option \"{option_name}\" has been updated. From \"{old_value}\" to "
+"\"{new_value}\"."
+msgstr ""
+
+#: includes/iworks/options/options.php:247
 msgid "No Page Title"
 msgstr "Brak tytułu strony"
 
-#: includes/iworks/options/options.php:340
+#: includes/iworks/options/options.php:419
 msgid "An error occurred while getting the configuration."
 msgstr "Wystąpił błąd przy pobieraniu konfiguracji."
 
-#: includes/iworks/options/options.php:919
-#: includes/iworks/options/options.php:2407
+#: includes/iworks/options/options.php:998
+#: includes/iworks/options/options.php:2388
 msgid "Select Image"
 msgstr "Wybierz obrazek"
 
-#: includes/iworks/options/options.php:924
+#: includes/iworks/options/options.php:1003
 msgid "Delete image"
 msgstr "Usuń obrazek"
 
-#: includes/iworks/options/options.php:1032
+#: includes/iworks/options/options.php:1111
 msgid "Save Changes"
 msgstr "Zapisz zmiany"
 
-#: includes/iworks/options/options.php:2280
+#: includes/iworks/options/options.php:2261
 msgid "Country"
 msgstr "Kraj"
 
-#: includes/iworks/options/options.php:2281
+#: includes/iworks/options/options.php:2262
 msgid "City"
 msgstr "Miejscowość"
 
-#: includes/iworks/options/options.php:2282
+#: includes/iworks/options/options.php:2263
 msgid "Street"
 msgstr "Ulica"
 
-#: includes/iworks/options/options.php:2283
+#: includes/iworks/options/options.php:2264
 msgid "ZIP code"
 msgstr "Kod pocztowy"
 
-#: includes/iworks/options/options.php:2467
+#: includes/iworks/options/options.php:2448
 msgid "OFF"
 msgstr "Wyłącz"
 
-#: includes/iworks/options/options.php:2468
+#: includes/iworks/options/options.php:2449
 msgid "ON"
 msgstr "WŁĄCZ"
 
-#: includes/iworks/options/options.php:2533
+#: includes/iworks/options/options.php:2514
 msgid "Failed Security Check"
 msgstr "Nieudana kontrola bezpieczeństwa"
 
@@ -210,12 +216,12 @@ msgstr "OG — Lepsze udostępnianie w mediach społecznościowych"
 msgid "https://wordpress.org/plugins/og/"
 msgstr "https://pl.wordpress.org/plugins/og/"
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:21
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:19
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:21
 msgid "🎉 Happy Anniversary! 🎉"
 msgstr "🎉 Wszystkiego najlepszego z okazji rocznicy! 🎉"
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:23
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:21
 msgid ""
 "Wow, it’s already been a whole year since you’ve been using our plugin—thank "
 "you so much for being part of our journey! We truly appreciate your support "
@@ -225,7 +231,7 @@ msgstr ""
 "bycie częścią naszej wspólnej przygody! Naprawdę doceniam Twoje wsparcie i "
 "mam nadzieję, że wtyczka ułatwiła Ci pracę i uczyniła ją przyjemniejszą."
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:24
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:22
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:24
 msgid ""
 "If you’ve found our plugin helpful and would like to support its continued "
@@ -238,28 +244,28 @@ msgstr ""
 "kawy. Każda odrobina pomaga nam w ciągłym doskonaleniu i dodawaniu nowych "
 "funkcji dla wspaniałych użytkowników, takich jak Ty!"
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:25
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:23
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:25
 msgid "☕ Buy Me a Coffee"
 msgstr "☕ Kup mi kawę"
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:26
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:24
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:26
 msgid "Thank you for your support and for making this community amazing!"
 msgstr ""
 "Dziękuję za Twoje wsparcie i za to, że tworzysz niesamowitą społeczność!"
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:30
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:28
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:30
 msgid "With gratitude"
 msgstr "Z wdzięcznością"
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:34
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:32
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:34
 msgid "Marcin Pietrzak"
 msgstr "Marcin Pietrzak"
 
-#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:36
+#: includes/iworks/rate/templates/happy-anniversary/anniversary.php:34
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:36
 msgid "Plugin Author"
 msgstr "Autor wtyczki"
