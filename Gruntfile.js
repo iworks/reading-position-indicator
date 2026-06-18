@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 			'!assets/scripts/src/**',
 			'!assets/scss/**',
 			'!assets/styles/frontend/**',
-			'!includes/iworks/**/class-simple-consent-mode-github.php',
+			'!includes/iworks/**/class-reading-position-indicator-github.php',
 			'!includes/pro/**',
 			'!languages/*.mo',
 			'!languages/*.po',
@@ -77,6 +77,7 @@ module.exports = function(grunt) {
 		// SASS files to process. Resulting CSS files will be minified as well.
 		css_files_compile: {
 			'assets/styles/iworks_position.css': 'assets/scss/iworks_position.scss',
+			'assets/styles/iworks_position.admin.css': 'assets/scss/iworks_position.admin.scss',
 		},
 
 		replace_patterns: [{
@@ -164,10 +165,10 @@ module.exports = function(grunt) {
 			options: {
 				stripBanners: true,
 				banner: '/*! <%= pkg.title %> - <%= pkg.version %>\n' +
-				' * <%= pkg.homepage %>\n' +
-				' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
-				' * Licensed <%= pkg.license %>' +
-				' */\n'
+					' * <%= pkg.homepage %>\n' +
+					' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
+					' * Licensed <%= pkg.license %>' +
+					' */\n'
 			},
 			scripts: {
 				files: conf.js_files_concat
@@ -212,10 +213,10 @@ module.exports = function(grunt) {
 				}],
 				options: {
 					banner: '/*! <%= pkg.title %> - <%= pkg.version %>\n' +
-					' * <%= pkg.homepage %>\n' +
-					' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
-					' * Licensed <%= pkg.license %>' +
-					' */\n',
+						' * <%= pkg.homepage %>\n' +
+						' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
+						' * Licensed <%= pkg.license %>' +
+						' */\n',
 					mangle: {
 						except: ['jQuery']
 					}
@@ -263,10 +264,10 @@ module.exports = function(grunt) {
 		cssmin: {
 			options: {
 				banner: '/*! <%= pkg.title %> - <%= pkg.version %>\n' +
-				' * <%= pkg.homepage %>\n' +
-				' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
-				' * Licensed <%= pkg.license %>' +
-				' */\n',
+					' * <%= pkg.homepage %>\n' +
+					' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
+					' * Licensed <%= pkg.license %>' +
+					' */\n',
 				mergeIntoShorthands: false
 			},
 			minify: {
@@ -466,7 +467,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['clean:temp', 'concat', 'uglify', 'sass', 'cssmin']);
 	grunt.registerTask('js', ['concat', 'uglify']);
 	grunt.registerTask('css', ['sass', 'cssmin']);
-	grunt.registerTask('i18n', ['checktextdomain', 'makepot' ]);
+	grunt.registerTask('i18n', ['checktextdomain', 'makepot']);
 
 	grunt.registerTask(
 		'build',
@@ -491,7 +492,7 @@ module.exports = function(grunt) {
 			'compress:github'
 		]
 	);
-	grunt.registerTask('release', ['build:wporg', 'build:github', 'notes' ]);
+	grunt.registerTask('release', ['build:wporg', 'build:github', 'notes']);
 	grunt.registerTask('test', ['phpunit', 'jshint', 'notes']);
 	grunt.util.linefeed = '\n';
 };

@@ -5,22 +5,22 @@ msgstr ""
 "Project-Id-Version: Plugins - Reading Position Indicator - Development "
 "(trunk)\n"
 "Report-Msgid-Bugs-To: http://iworks.pl\n"
-"POT-Creation-Date: 2026-06-17 10:53:59+00:00\n"
-"PO-Revision-Date: 2024-09-12 14:19:58+0000\n"
+"POT-Creation-Date: 2026-06-18 08:34:36+00:00\n"
+"PO-Revision-Date: 2026-01-12 13:32:17+0000\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.1\n"
+"X-Generator: GlotPress/4.0.3\n"
 
 #: etc/options.php:11
 msgid "Progress configuration"
-msgstr ""
+msgstr "Vooruitgangsconfiguratie"
 
 #: etc/options.php:12
 msgid "Progress"
-msgstr ""
+msgstr "Voortgang"
 
 #: etc/options.php:25
 msgid "Display On"
@@ -28,7 +28,7 @@ msgstr ""
 
 #: etc/options.php:34
 msgid "Position"
-msgstr ""
+msgstr "Positie"
 
 #: etc/options.php:37
 msgid "top"
@@ -36,11 +36,11 @@ msgstr ""
 
 #: etc/options.php:38
 msgid "bottom"
-msgstr ""
+msgstr "onderkant"
 
 #: etc/options.php:46
 msgid "Position placement"
-msgstr ""
+msgstr "Positie plaatsing"
 
 #: etc/options.php:47 etc/options.php:69 etc/options.php:142
 msgid "px"
@@ -52,15 +52,15 @@ msgstr ""
 
 #: etc/options.php:56
 msgid "Color style"
-msgstr ""
+msgstr "Kleurstijl"
 
 #: etc/options.php:59
 msgid "solid"
-msgstr ""
+msgstr "doorlopend"
 
 #: etc/options.php:60
 msgid "gradient"
-msgstr ""
+msgstr "gradiënt"
 
 #: etc/options.php:61
 msgid "indeterminate"
@@ -68,19 +68,19 @@ msgstr ""
 
 #: etc/options.php:68
 msgid "Thickness"
-msgstr ""
+msgstr "Dikte"
 
 #: etc/options.php:79
 msgid "Foreground color"
-msgstr ""
+msgstr "Voorgrondkleur"
 
 #: etc/options.php:83 etc/options.php:124
 msgid "The part that moves on scroll."
-msgstr ""
+msgstr "Het deel dat zich verplaatst bij het scrollen."
 
 #: etc/options.php:89
 msgid "Foreground opacity"
-msgstr ""
+msgstr "Achtergrond doorzichtigheid"
 
 #: etc/options.php:90 etc/options.php:110 etc/options.php:131
 msgid "%"
@@ -88,7 +88,7 @@ msgstr ""
 
 #: etc/options.php:100
 msgid "Secoundary color"
-msgstr ""
+msgstr "Secundaire kleur"
 
 #: etc/options.php:109
 msgid "Secoundary color opacity"
@@ -100,15 +100,15 @@ msgstr "Achtergrondkleur"
 
 #: etc/options.php:130
 msgid "Background opacity"
-msgstr ""
+msgstr "Achtergrond doorzichtigheid"
 
 #: etc/options.php:141
 msgid "Progress radius"
-msgstr ""
+msgstr "Radius voortgang"
 
 #: etc/options.php:150 etc/options.php:187
 msgid "We are waiting for your message"
-msgstr ""
+msgstr "We wachten op je bericht"
 
 #: etc/options.php:156
 msgid "I love what I do!"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: etc/options.php:203
 msgid "Give it a five stars on WordPress.org"
-msgstr ""
+msgstr "Geef het een vijfsterrenbeoordeling op WordPress.org"
 
 #: etc/options.php:204
 msgid "Link to it so others can easily find it"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: includes/iworks/options/options.php:247
 msgid "No Page Title"
-msgstr ""
+msgstr "Geen paginatitel"
 
 #: includes/iworks/options/options.php:419
 msgid "An error occurred while getting the configuration."
@@ -151,15 +151,15 @@ msgstr ""
 #: includes/iworks/options/options.php:998
 #: includes/iworks/options/options.php:2388
 msgid "Select Image"
-msgstr "Selecteer afbeelding"
+msgstr "Afbeelding selecteren"
 
 #: includes/iworks/options/options.php:1003
 msgid "Delete image"
-msgstr ""
+msgstr "Afbeelding verwijderen"
 
 #: includes/iworks/options/options.php:1111
 msgid "Save Changes"
-msgstr ""
+msgstr "Wijzigingen opslaan"
 
 #: includes/iworks/options/options.php:2261
 msgid "Country"
@@ -167,15 +167,15 @@ msgstr "Land"
 
 #: includes/iworks/options/options.php:2262
 msgid "City"
-msgstr ""
+msgstr "Plaats"
 
 #: includes/iworks/options/options.php:2263
 msgid "Street"
-msgstr ""
+msgstr "Straat"
 
 #: includes/iworks/options/options.php:2264
 msgid "ZIP code"
-msgstr ""
+msgstr "Postcode"
 
 #: includes/iworks/options/options.php:2448
 msgid "OFF"
@@ -183,7 +183,7 @@ msgstr "UIT"
 
 #: includes/iworks/options/options.php:2449
 msgid "ON"
-msgstr ""
+msgstr "AAN"
 
 #: includes/iworks/options/options.php:2514
 msgid "Failed Security Check"
@@ -196,12 +196,12 @@ msgstr "﻿Instellingen"
 #: includes/iworks/rate/rate.php:173
 #: includes/iworks/rate/templates/thanks.php:39
 msgid "Provide us a coffee"
-msgstr ""
+msgstr "Gun ons een kopje koffie"
 
 #. translators: %s: plugin id
 #: includes/iworks/rate/rate.php:626
 msgid "There is no plugin with id: %s."
-msgstr ""
+msgstr "Er is geen plugin met id: %s."
 
 #: includes/iworks/rate/rate.php:800
 msgid "OpenGraph"
@@ -218,7 +218,7 @@ msgstr "https://wordpress.org/plugins/og/"
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:19
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:21
 msgid "🎉 Happy Anniversary! 🎉"
-msgstr ""
+msgstr "🎉 Van harte gefeliciteerd! 🎉"
 
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:21
 msgid ""
@@ -226,6 +226,9 @@ msgid ""
 "you so much for being part of our journey! We truly appreciate your support "
 "and hope the plugin has made your work easier and more enjoyable."
 msgstr ""
+"Wauw, het is alweer een heel jaar geleden dat je onze plugin gebruikt. Heel "
+"erg bedankt dat je ons hebt gesteund! We waarderen je steun enorm en hopen "
+"dat de plugin je werk makkelijker en leuker heeft gemaakt."
 
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:22
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:24
@@ -235,21 +238,25 @@ msgid ""
 "coffee. Every little bit helps us keep improving and adding new features for "
 "awesome users like you!"
 msgstr ""
+"Als je onze plugin nuttig vindt en de verdere ontwikkeling ervan wil "
+"ondersteunen, zouden we het enorm waarderen als je ons een kopje koffie zou "
+"willen aanbieden. Alle beetjes helpen ons om te blijven verbeteren en nieuwe "
+"functies toe te voegen voor geweldige gebruikers zoals je!"
 
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:23
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:25
 msgid "☕ Buy Me a Coffee"
-msgstr ""
+msgstr "☕ Koop een kopje koffie voor mij"
 
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:24
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:26
 msgid "Thank you for your support and for making this community amazing!"
-msgstr ""
+msgstr "Bedankt voor je steun en dat je deze community zo geweldig maakt!"
 
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:28
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:30
 msgid "With gratitude"
-msgstr ""
+msgstr "Met dankbaarheid"
 
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:32
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:34
@@ -259,7 +266,7 @@ msgstr "Marcin Pietrzak"
 #: includes/iworks/rate/templates/happy-anniversary/anniversary.php:34
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:36
 msgid "Plugin Author"
-msgstr ""
+msgstr "Plugin auteur"
 
 #: includes/iworks/rate/templates/happy-anniversary/first-year.php:23
 msgid ""
@@ -267,6 +274,9 @@ msgid ""
 "you so much for being part of our journey! We hope it’s made your work "
 "easier and more enjoyable."
 msgstr ""
+"Wauw, het is alweer een heel jaar geleden dat je onze plugin bent gaan "
+"gebruiken. Heel erg bedankt dat je deel uitmaakt van onze reis! We hopen dat "
+"het je werk makkelijker en leuker heeft gemaakt."
 
 #: includes/iworks/rate/templates/plugins/og.php:4
 msgid "Would you like to boost your website sharing abilities?"
@@ -285,7 +295,7 @@ msgstr "Installeren"
 #. translators: %s is a plugin name wrapped by strong html tag
 #: includes/iworks/rate/templates/thanks.php:23
 msgid "Thank you for using our plugin %s!"
-msgstr ""
+msgstr "Bedankt voor het gebruik van onze plugin %s!"
 
 #. translators: %1$s: open anchor tag, %2$s: close anchor tag
 #: includes/iworks/rate/templates/thanks.php:31
@@ -296,26 +306,33 @@ msgid ""
 "our FAQ%2$s or contact us if you did not find help there. We will try to "
 "help you!"
 msgstr ""
+"Laat ons alstublieft weten wat je van onze plugin vindt. Het is belangrijk "
+"dat we deze tool kunnen ontwikkelen. Bedankt voor alle waarderingen, "
+"beoordelingen en donaties. Als je een technisch probleem hebt, kijk dan "
+"voordat je een beoordeling toevoegt %1$sin onze FAQ%2$s of neem contact met "
+"ons op als je daar geen hulp hebt gevonden. We zullen proberen je te helpen!"
 
 #: includes/iworks/rate/templates/thanks.php:35
 #: includes/iworks/rate/templates/widgets/support.php:21
 msgid "Get help"
-msgstr ""
+msgstr "Krijg hulp"
 
 #: includes/iworks/rate/templates/thanks.php:37
 #: includes/iworks/rate/templates/widgets/support.php:31
 msgid "Add review"
-msgstr ""
+msgstr "Beoordeling toevoegen"
 
 #: includes/iworks/rate/templates/thanks.php:41
 msgid "I added review, do not show again"
-msgstr ""
+msgstr "Ik heb een beoordeling toegevoegd, niet meer weergeven"
 
 #: includes/iworks/rate/templates/widgets/donate.php:2
 msgid ""
 "However, working on plugins and technical support requires many hours of "
 "work. If you want to appreciate it, you can provide me a coffee."
 msgstr ""
+"Het werken aan plugins en technische ondersteuning vereist echter vele uren "
+"werk. Als je het wil waarderen, kun je me een kopje koffie geven."
 
 #: includes/iworks/rate/templates/widgets/donate.php:3
 msgid ""
@@ -385,24 +402,31 @@ msgstr ""
 #: etc/options.php:189
 msgctxt "link to support forum on WordPress.org"
 msgid "https://wordpress.org/support/plugin/reading-position-indicator/"
-msgstr ""
+msgstr "https://nl.wordpress.org/support/plugin/reading-position-indicator/"
 
 #: etc/options.php:204
 msgctxt "plugin home page on WordPress.org"
 msgid "https://wordpress.org/plugins/reading-position-indicator/"
-msgstr ""
+msgstr "https://nl.wordpress.org/plugins/reading-position-indicator/"
 
 #. translators: %s: plugin slug
 #: includes/iworks/rate/rate.php:649
 msgctxt "plugins home"
 msgid "https://wordpress.org/plugins/%s"
-msgstr ""
+msgstr "https://nl.wordpress.org/plugins/%s"
 
 #. translators: %s: plugin slug
 #: includes/iworks/rate/rate.php:656
 msgctxt "plugins support home"
 msgid "https://wordpress.org/support/plugin/%s"
-msgstr ""
+msgstr "https://nl.wordpress.org/support/plugin/%s"
+
+#~ msgid ""
+#~ "A sleek, customizable horizontal progress bar that visually indicates "
+#~ "readers' scroll position on your WordPress posts and pages."
+#~ msgstr ""
+#~ "Een stijlvolle, aanpasbare horizontale voortgangsbalk die visueel de "
+#~ "scrolpositie van de lezer op je WordPress-berichten en -pagina's aangeeft."
 
 #~ msgid "https://github.com/iworks/reading-position-indicator"
 #~ msgstr "https://github.com/iworks/reading-position-indicator"
