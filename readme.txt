@@ -1,6 +1,6 @@
 === Reading Position Indicator ===
 Contributors: iworks
-Donate link: http://iworks.pl/donate/reading-position-indicator.php
+Donate link: https://ko-fi.com/iworks?utm_source=reading-position-indicator&utm_medium=readme-donate
 Tags: PLUGIN_TAGS
 Requires at least: PLUGIN_REQUIRES_WORDPRESS
 Tested up to: PLUGIN_TESTED_WORDPRESS
@@ -22,9 +22,11 @@ Reading Position Indicator adds a stylish horizontal progress bar alongside your
 * Translation ready.
 * Compatible with most WordPress themes.
 
-
-
 Thank you [Pankaj Parashar](http://pankajparashar.com/) for your article on CSS-TRICKS about [Reading Position Indicator](https://css-tricks.com/reading-position-indicator/)
+
+= GitHub =
+
+The Reading Position Indicator plugin is available also on [GitHub - Reading Position Indicator](https://github.com/iworks/reading-position-indicator).
 
 == Screenshots ==
 
@@ -73,6 +75,9 @@ No, it is lightweight and optimized to have minimal impact on your site’s load
 Yes, the progress bar is responsive and works well on all screen sizes.
 
 == Changelog ==
+
+= 1.2.3 - 2026-07-21 =
+* **Dependencies**: Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 3.1.1.
 
 = 1.2.2 - 2026-06-17 =
 * **Dependencies**: Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 3.1.0 and the [iWorks Rate](https://github.com/iworks/iworks-rate) module to version 2.3.2.
