@@ -6,7 +6,7 @@ function iworks_reading_position_indicator_options() {
 	 * main settings
 	 */
 	$options['index'] = array(
-		'use_tabs'        => false,
+		'use_tabs'        => true,
 		'version'         => '0.0',
 		'page_title'      => esc_html__( 'Progress configuration', 'reading-position-indicator' ),
 		'menu_title'      => esc_html__( 'Progress', 'reading-position-indicator' ),
@@ -18,7 +18,12 @@ function iworks_reading_position_indicator_options() {
 			'progress-admin',
 			'reading-position-indicator',
 		),
-		'options'         => array(
+        'options'         => array(
+			array(
+				'type'  => 'heading',
+				'label' => esc_html__( 'Main', 'reading-position-indicator' ),
+				'since' => '1.2.3',
+			),
 			array(
 				'name'              => 'post_type',
 				'type'              => 'select2',
@@ -49,6 +54,11 @@ function iworks_reading_position_indicator_options() {
 				'min'               => 0,
 				'sanitize_callback' => 'absint',
 				'description'       => esc_html__( 'Direction depend on position.', 'reading-position-indicator' ),
+			),
+			array(
+				'type'  => 'heading',
+				'label' => esc_html__( 'Design', 'reading-position-indicator' ),
+				'since' => '1.2.3',
 			),
 			array(
 				'name'              => 'style',

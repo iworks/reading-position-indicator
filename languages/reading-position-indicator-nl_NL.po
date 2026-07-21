@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Plugins - Reading Position Indicator - Development "
 "(trunk)\n"
 "Report-Msgid-Bugs-To: http://iworks.pl\n"
-"POT-Creation-Date: 2026-06-18 08:34:36+00:00\n"
+"POT-Creation-Date: 2026-07-21 07:38:46+00:00\n"
 "PO-Revision-Date: 2026-01-12 13:32:17+0000\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -22,111 +22,119 @@ msgstr "Vooruitgangsconfiguratie"
 msgid "Progress"
 msgstr "Voortgang"
 
-#: etc/options.php:25
+#: etc/options.php:24
+msgid "Main"
+msgstr ""
+
+#: etc/options.php:30
 msgid "Display On"
 msgstr ""
 
-#: etc/options.php:34
+#: etc/options.php:39
 msgid "Position"
 msgstr "Positie"
 
-#: etc/options.php:37
+#: etc/options.php:42
 msgid "top"
 msgstr ""
 
-#: etc/options.php:38
+#: etc/options.php:43
 msgid "bottom"
 msgstr "onderkant"
 
-#: etc/options.php:46
+#: etc/options.php:51
 msgid "Position placement"
 msgstr "Positie plaatsing"
 
-#: etc/options.php:47 etc/options.php:69 etc/options.php:142
+#: etc/options.php:52 etc/options.php:79 etc/options.php:152
 msgid "px"
 msgstr "px"
 
-#: etc/options.php:51
+#: etc/options.php:56
 msgid "Direction depend on position."
 msgstr ""
 
-#: etc/options.php:56
+#: etc/options.php:60
+msgid "Design"
+msgstr ""
+
+#: etc/options.php:66
 msgid "Color style"
 msgstr "Kleurstijl"
 
-#: etc/options.php:59
+#: etc/options.php:69
 msgid "solid"
 msgstr "doorlopend"
 
-#: etc/options.php:60
+#: etc/options.php:70
 msgid "gradient"
 msgstr "gradiënt"
 
-#: etc/options.php:61
+#: etc/options.php:71
 msgid "indeterminate"
 msgstr ""
 
-#: etc/options.php:68
+#: etc/options.php:78
 msgid "Thickness"
 msgstr "Dikte"
 
-#: etc/options.php:79
+#: etc/options.php:89
 msgid "Foreground color"
 msgstr "Voorgrondkleur"
 
-#: etc/options.php:83 etc/options.php:124
+#: etc/options.php:93 etc/options.php:134
 msgid "The part that moves on scroll."
 msgstr "Het deel dat zich verplaatst bij het scrollen."
 
-#: etc/options.php:89
+#: etc/options.php:99
 msgid "Foreground opacity"
 msgstr "Achtergrond doorzichtigheid"
 
-#: etc/options.php:90 etc/options.php:110 etc/options.php:131
+#: etc/options.php:100 etc/options.php:120 etc/options.php:141
 msgid "%"
 msgstr ""
 
-#: etc/options.php:100
+#: etc/options.php:110
 msgid "Secoundary color"
 msgstr "Secundaire kleur"
 
-#: etc/options.php:109
+#: etc/options.php:119
 msgid "Secoundary color opacity"
 msgstr ""
 
-#: etc/options.php:120
+#: etc/options.php:130
 msgid "Background color"
 msgstr "Achtergrondkleur"
 
-#: etc/options.php:130
+#: etc/options.php:140
 msgid "Background opacity"
 msgstr "Achtergrond doorzichtigheid"
 
-#: etc/options.php:141
+#: etc/options.php:151
 msgid "Progress radius"
 msgstr "Radius voortgang"
 
-#: etc/options.php:150 etc/options.php:187
+#: etc/options.php:160 etc/options.php:197
 msgid "We are waiting for your message"
 msgstr "We wachten op je bericht"
 
-#: etc/options.php:156
+#: etc/options.php:166
 msgid "I love what I do!"
 msgstr ""
 
-#: etc/options.php:189
+#: etc/options.php:199
 msgid "WordPress Help Forum"
 msgstr ""
 
-#: etc/options.php:201
+#: etc/options.php:211
 msgid "Below are some links to help spread this plugin to other users"
 msgstr ""
 
-#: etc/options.php:203
+#: etc/options.php:213
 msgid "Give it a five stars on WordPress.org"
 msgstr "Geef het een vijfsterrenbeoordeling op WordPress.org"
 
-#: etc/options.php:204
+#: etc/options.php:214
 msgid "Link to it so others can easily find it"
 msgstr ""
 
@@ -399,12 +407,12 @@ msgstr ""
 msgid "AUTHOR_URI"
 msgstr ""
 
-#: etc/options.php:189
+#: etc/options.php:199
 msgctxt "link to support forum on WordPress.org"
 msgid "https://wordpress.org/support/plugin/reading-position-indicator/"
 msgstr "https://nl.wordpress.org/support/plugin/reading-position-indicator/"
 
-#: etc/options.php:204
+#: etc/options.php:214
 msgctxt "plugin home page on WordPress.org"
 msgid "https://wordpress.org/plugins/reading-position-indicator/"
 msgstr "https://nl.wordpress.org/plugins/reading-position-indicator/"

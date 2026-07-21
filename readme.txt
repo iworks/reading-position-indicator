@@ -78,6 +78,8 @@ Yes, the progress bar is responsive and works well on all screen sizes.
 
 = 1.2.3 - 2026-07-21 =
 * **Dependencies**: Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 3.1.1.
+* **Improvements**: Updated build process.
+* **Improvements**: Added tabs to the options screen to shorten the screen length.
 
 = 1.2.2 - 2026-06-17 =
 * **Dependencies**: Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 3.1.0 and the [iWorks Rate](https://github.com/iworks/iworks-rate) module to version 2.3.2.

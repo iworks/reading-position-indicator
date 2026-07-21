@@ -17,6 +17,7 @@ module.exports = function(grunt) {
 
 	var buildtime = new Date().toISOString();
 	var buildyear = 1900 + new Date().getYear();
+	var buildtimestamp = new Date().getTime();
 
 	/**
 	 * excludes
@@ -87,6 +88,12 @@ module.exports = function(grunt) {
 			match: /AUTHOR_URI/g,
 			replace: '<%= pkg.author[0].uri %>'
 		}, {
+			match: /AUTHOR_URL/g,
+			replace: '<%= pkg.author[0].uri %>'
+		}, {
+			match: /BUILDTIMESTAMP/g,
+			replace: buildtimestamp
+		}, {
 			match: /BUILDTIME/g,
 			replace: buildtime
 		}, {
@@ -117,11 +124,11 @@ module.exports = function(grunt) {
 			match: /PLUGIN_TAGLINE/g,
 			replace: '<%= pkg.tagline %>'
 		}, {
-			match: /PLUGIN_TILL_YEAR/g,
-			replace: buildyear
-		}, {
 			match: /PLUGIN_TAGS/g,
 			replace: '<%= pkg.tags.join(", ") %>'
+		}, {
+			match: /PLUGIN_TILL_YEAR/g,
+			replace: buildyear
 		}, {
 			match: /PLUGIN_TITLE/g,
 			replace: '<%= pkg.title %>'
@@ -142,6 +149,7 @@ module.exports = function(grunt) {
 		// Regex patterns to exclude from transation.
 		translation: {
 			ignore_files: [
+				'README.md',
 				'.git*',
 				'includes/external/.*', // External libraries.
 				'node_modules/.*',
@@ -166,7 +174,7 @@ module.exports = function(grunt) {
 				stripBanners: true,
 				banner: '/*! <%= pkg.title %> - <%= pkg.version %>\n' +
 					' * <%= pkg.homepage %>\n' +
-					' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
+					' * Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
 					' * Licensed <%= pkg.license %>' +
 					' */\n'
 			},
@@ -242,7 +250,6 @@ module.exports = function(grunt) {
 				testsuite: 'default',
 				configuration: 'tests/php/phpunit.xml',
 				colors: true,
-				tap: true,
 				staticBackup: false,
 				noGlobalsBackup: false
 			}
@@ -342,10 +349,9 @@ module.exports = function(grunt) {
 						'report-msgid-bugs-to': 'http://iworks.pl',
 						'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
 					},
-					exclude: ['node_modules', '.git', '.sass-cache', 'release'],
 					type: 'wp-plugin',
-					updateTimestamp: true,
-					updatePoFiles: true
+					updateTimestamp: true, // Whether the POT-Creation-Date should be updated without other changes.
+					updatePoFiles: true // Whether to update PO files in the same directory as the POT file.
 				}
 			}
 		},
@@ -423,7 +429,7 @@ module.exports = function(grunt) {
 
 		checktextdomain: {
 			options: {
-				text_domain: ['<%= pkg.name %>', 'IWORKS_RATE_TEXTDOMAIN', 'IWORKS_OPTIONS_TEXTDOMAIN'],
+				text_domain: ['<%= pkg.name %>', 'PLUGIN_NAME', 'IWORKS_RATE_TEXTDOMAIN', 'IWORKS_OPTIONS_TEXTDOMAIN'],
 				keywords: [ //List keyword specifications
 					'__:1,2d',
 					'_e:1,2d',

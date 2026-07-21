@@ -4,7 +4,13 @@
     "tagline": "Add reading position indicator on page top.",
     "description": "A sleek, customizable horizontal progress bar that visually indicates readers' scroll position on your WordPress posts and pages.",
     "version": "1.2.2",
-    "homepage": "https://github.com/iworks/reading-position-indicator",
+    "homepage": "http://iworks.pl/reading-position-indicator",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:iworks/reading-position-indicator.git",
+        "website": "https://github.com/iworks/reading-position-indicator"
+    },
+    "author": "iworks",
     "tags": [
         "animation",
         "indicator",
@@ -12,7 +18,7 @@
         "reading time",
         "time"
     ],
-    "author": [
+    "contributors": [
         {
             "name": "Marcin Pietrzak",
             "email": "marcin@iworks.pl",
@@ -50,11 +56,6 @@
         "grunt-potomo": "^3",
         "grunt-replace": "^1",
         "grunt-wp-i18n": "^1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@bitbucket.org:iworks-pl/reading-position-indicator.git",
-        "website": "https://github.com/iworks/reading-position-indicator"
     },
     "license": "GPL-3.0"
 }
