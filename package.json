@@ -4,7 +4,7 @@
     "tagline": "Add reading position indicator on page top.",
     "description": "A sleek, customizable horizontal progress bar that visually indicates readers' scroll position on your WordPress posts and pages.",
     "version": "1.2.3",
-    "homepage": "http://iworks.pl/reading-position-indicator",
+    "homepage": "http://iworks.pl/iw_plugin/reading-position-indicator/",
     "repository": {
         "type": "git",
         "url": "git@github.com:iworks/reading-position-indicator.git",
